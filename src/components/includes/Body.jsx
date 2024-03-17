@@ -32,6 +32,8 @@ const Body = () => {
                 </small>
                 /night
               </p>
+              
+
               <p>
                 {item.price_chart && (
                   <img src="src\assets\images\best time.png" />

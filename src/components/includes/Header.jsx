@@ -14,6 +14,8 @@ const Header = () => {
           <h1>
             <img src="src\assets\images\logo.png" />
           </h1>
+          
+          
         </div>
         <div>
           <ul className="flex gap-5 items-center font-normal ">

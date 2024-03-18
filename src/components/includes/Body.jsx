@@ -1,51 +1,64 @@
+import { useState } from "react";
+import ProductCard from "./ProductCard";
+
 import data from "../general/json/data.json";
-import { IoMdStar } from "react-icons/io";
-import { CiHeart } from "react-icons/ci";
+import RatingFilterDropdown from "../general/json/RatingFilterDropdown";
 
 const Body = () => {
+  const [firstImageActive, setFirstImageActive] = useState(false);
+  const [secondImageActive, setSecondImageActive] = useState(false);
+  const [selectedRatings, setSelectedRatings] = useState([]);
+
+  const toggleFirstImage = () => {
+    setFirstImageActive(!firstImageActive);
+    setSecondImageActive(false);
+  };
+
+  const toggleSecondImage = () => {
+    setSecondImageActive(!secondImageActive);
+    setFirstImageActive(false);
+  };
+
+  // Apply filtering based on selected ratings
+  let filteredData = data;
+  if (selectedRatings.length > 0) {
+    filteredData = data.filter((product) => {
+      const averageRating = product.average_rating;
+      return selectedRatings.some((rating) => rating <= averageRating);
+    });
+  }
+
   return (
-    <div className="flex flex-wrap wrapper justify-between  my-[100px] ">
-      {data.map((item) => (
-        <div
-          className="rounded-xl shadow-lg w-[23.5%] relative"
-          key={item.name}
-        >
-          <div className="w-[100%] ">
-            <img className="w-[100%] rounded-t-xl" src={item.image_url} />
-          </div>
-          <div className="p-4">
-            <div className="flex justify-between items-center mb-3">
-              <div>
-                <h1 className="text-base font-semibold">{item.name}</h1>
-                <p className="text-sm font-normal">{item.location}</p>
-              </div>
-
-              <p className="flex items-center ">
-                {item.average_rating}
-                <IoMdStar className="text-yellow-500" />
-              </p>
-            </div>
-            <div className="flex justify-between items-center">
-              <p className="text-sm text-[#787878]">
-                <small className="text-xl font-semibold text-black">
-                  ${item.price}
-                </small>
-                /night
-              </p>
-              
-
-              <p>
-                {item.price_chart && (
-                  <img src="src\assets\images\best time.png" />
-                )}
-              </p>
-            </div>
-          </div>
-          <div className="bg-[#F5F5F5] absolute top-4 right-4 rounded-full w-7 h-7 flex justify-center items-center hover:bg-red-400">
-            <CiHeart />
-          </div>
+    <div className="my-10">
+      <div className="wrapper flex">
+        <RatingFilterDropdown onChange={setSelectedRatings} />
+        
+      </div>
+      <div className="wrapper flex justify-between my-5">
+        <p className="text-xl">
+          Stays nearby: <span className="font-semibold">All</span>
+        </p>
+        <div className="flex gap-5">
+          <img
+            src="src\assets\images\Frame 25.png"
+            alt="logo"
+            onClick={toggleFirstImage}
+            className={firstImageActive ? "active" : ""}
+          />
+          <img
+            src="src\assets\images\Frame 24.png"
+            alt="logo"
+            onClick={toggleSecondImage}
+            className={secondImageActive ? "active" : ""}
+          />
         </div>
-      ))}
+      </div>
+      <div className="flex flex-wrap wrapper justify-between">
+        {/* Map over filtered data and render ProductCard for each item */}
+        {filteredData.map((product, index) => (
+          <ProductCard key={index} data={product} />
+        ))}
+      </div>
     </div>
   );
 };

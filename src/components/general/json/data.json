@@ -1,131 +1,163 @@
 [
-    {
-      "name": "Brightwoods Cabin",
-      "location": "Bridlepath, Ontario, Canada",
-      "price": 275,
-      "average_rating": 4.2,
-      "price_chart": true,
-      "image_url": "src/assets/images/listing image.png"
-    },
-    {
-      "name": "Urban Loft",
-      "location": "Georgina Bay, Ontario, Canada",
-      "price": 512,
-      "average_rating": 3.8,
-      "price_chart": false,
-      "image_url": "src/assets/images/image.png"
-    },
-    {
-      "name": "Farestville Cottages",
-      "location": "Simcoe, Ontario Canada",
-      "price": 689,
-      "average_rating": 4.6,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (1).png"
-    },
-    {
-      "name": "Unionville Lodge",
-      "location": "Markham, Ontario Canada",
-      "price": 431,
-      "average_rating": 3.4,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (2).png"
-    },
-    {
-      "name": "Mississauga Airstream",
-      "location": "Mississauga, Ontario, Canada",
-      "price": 37,
-      "average_rating": 4.9,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (3).png"
-    },
-    {
-      "name": "Niagara Homes",
-      "location": "Niagara, Ontario, Canada",
-      "price": 752,
-      "average_rating": 2.7,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (4).png"
-    },
-    {
-      "name": "Sunny Estate",
-      "location": "Barcort, Ontario Canada",
-      "price": 173,
-      "average_rating": 4.1,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (5).png"
-    },
-    {
-      "name": "Lawrence Hills",
-      "location": "Lawrence, Ontario Canada",
-      "price": 614,
-      "average_rating": 3.2,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (6).png"
-    },
-    {
-      "name": "Simcoe Lake Lodge",
-      "location": "Simcoe, Ontario, Canada",
-      "price": 828,
-      "average_rating": 4.4,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (7).png"
-    },
-    {
-      "name": "Wasaga Beach Homes",
-      "location": "Georgina Bay, Ontario, Canada",
-      "price": 94,
-      "average_rating": 3.6,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (8).png"
-    },
-    {
-      "name": "Banff Hills",
-      "location": "Banff, Alberta, Canada",
-      "price": 872,
-      "average_rating": 4.8,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (9).png"
-    },
-    {
-      "name": "Creemore Canada",
-      "location": "Creemore, Alberta, Canada",
-      "price": 503,
-      "average_rating": 2.9,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (10).png"
-    },
-    {
-      "name": "Kawartha Lakes",
-      "location": "Kawartha, Alberta, Canada",
-      "price": 187,
-      "average_rating": 4.3,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (11).png"
-    },
-    {
-      "name": "Revelstoke Cabin",
-      "location": "Revelstoke, Alberta, Canada",
-      "price": 397,
-      "average_rating": 3.7,
-      "price_chart": true,
-      "image_url": "src/assets/images/image (12).png"
-    },
-    {
-      "name": "Brightwoods Estate",
-      "location": "Brightwoods Estate",
-      "price": 52,
-      "average_rating": 2.5,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (13).png"
-    },
-    {
-      "name": "Lightwoods Estate",
-      "location": "Lightwoods Estate",
-      "price": 928,
-      "average_rating": 4.0,
-      "price_chart": false,
-      "image_url": "src/assets/images/image (14).png"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Brightwoods Cabin",
+    "location": "Bridlepath, Ontario, Canada",
+    "price": 275,
+    "average_rating": 4.2,
+    "price_chart": true,
+    "image_url": "src/assets/images/listing image.png",
+    "categories": "Cabin"
+  },
+  {
+    "id": 2,
+    "name": "Urban Loft",
+    "location": "Georgina Bay, Ontario, Canada",
+    "price": 512,
+    "average_rating": 3.8,
+    "price_chart": false,
+    "image_url": "src/assets/images/image.png",
+    "categories": "Cottages"
+  },
+  {
+    "id": 3,
+    "name": "Farestville Cottages",
+    "location": "Simcoe, Ontario Canada",
+    "price": 689,
+    "average_rating": 4.6,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (1).png",
+    "categories": "Cottages"
+  },
+  {
+    "id": 4,
+    "name": "Unionville Lodge",
+    "location": "Markham, Ontario Canada",
+    "price": 431,
+    "average_rating": 3.4,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (2).png",
+    "categories": "Lodge"
+  },
+  {
+    "id": 5,
+    "name": "Mississauga Airstream",
+    "location": "Mississauga, Ontario, Canada",
+    "price": 37,
+    "average_rating": 4.9,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (3).png",
+    "categories": "Cabin"
+  },
+  {
+    "id": 6,
+    "name": "Niagara Homes",
+    "location": "Niagara, Ontario, Canada",
+    "price": 752,
+    "average_rating": 2.7,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (4).png",
+    "categories": "Home"
+  },
+  {
+    "id": 7,
+    "name": "Sunny Estate",
+    "location": "Barcort, Ontario Canada",
+    "price": 173,
+    "average_rating": 4.1,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (5).png",
+    "categories": "Estate"
+  },
+  {
+    "id": 8,
+    "name": "Lawrence Hills",
+    "location": "Lawrence, Ontario Canada",
+    "price": 614,
+    "average_rating": 3.2,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (6).png",
+    "categories": "Hills"
+  },
+  {
+    "id": 9,
+    "name": "Simcoe Lake Lodge",
+    "location": "Simcoe, Ontario, Canada",
+    "price": 828,
+    "average_rating": 4.4,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (7).png",
+    "categories": "Lodge"
+  },
+  {
+    "id": 10,
+    "name": "Wasaga Beach Homes",
+    "location": "Georgina Bay, Ontario, Canada",
+    "price": 94,
+    "average_rating": 3.6,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (8).png",
+    "categories": "Homes"
+  },
+  {
+    "id": 11,
+    "name": "Banff Hills",
+    "location": "Banff, Alberta, Canada",
+    "price": 872,
+    "average_rating": 4.8,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (9).png",
+    "categories": "Hills"
+  },
+  {
+    "id": 12,
+    "name": "Creemore Canada",
+    "location": "Creemore, Alberta, Canada",
+    "price": 503,
+    "average_rating": 2.9,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (10).png",
+    "categories": "Estate"
+  },
+  {
+    "id": 13,
+    "name": "Kawartha Lakes",
+    "location": "Kawartha, Alberta, Canada",
+    "price": 187,
+    "average_rating": 4.3,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (11).png",
+    "categories": "Lakes"
+  },
+  {
+    "id": 14,
+    "name": "Revelstoke Cabin",
+    "location": "Revelstoke, Alberta, Canada",
+    "price": 397,
+    "average_rating": 3.7,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (12).png",
+    "categories": "Cabin"
+  },
+  {
+    "id": 15,
+    "name": "Brightwoods Estate",
+    "location": "Brightwoods Estate",
+    "price": 52,
+    "average_rating": 2.5,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (13).png",
+    "categories": "Estate"
+  },
+  {
+    "id": 16,
+    "name": "Lightwoods Estate",
+    "location": "Lightwoods Estate",
+    "price": 928,
+    "average_rating": 4.0,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (14).png",
+    "categories": "Estate"
+
+  }
+]

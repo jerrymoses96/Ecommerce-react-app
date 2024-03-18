@@ -159,5 +159,46 @@
     "image_url": "src/assets/images/image (14).png",
     "categories": "Estate"
 
+  },
+  
+  {
+    "id": 17,
+    "name": "Whistler Chalet",
+    "location": "Whistler, British Columbia, Canada",
+    "price": 789,
+    "average_rating": 4.5,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (2).png",
+    "categories": "Cabin"
+  },
+  {
+    "id": 18,
+    "name": "Rocky Mountain Retreat",
+    "location": "Banff, Alberta, Canada",
+    "price": 649,
+    "average_rating": 4.7,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (7).png",
+    "categories": "Estate"
+  },
+  {
+    "id": 19,
+    "name": "Sunset Beach Bungalow",
+    "location": "Vancouver Island, British Columbia, Canada",
+    "price": 369,
+    "average_rating": 4.3,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (11).png",
+    "categories": "Cabin"
+  },
+  {
+    "id": 20,
+    "name": "Mountain View Lodge",
+    "location": "Jasper, Alberta, Canada",
+    "price": 589,
+    "average_rating": 4.0,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (6).png",
+    "categories": "Lodge"
   }
 ]

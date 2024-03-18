@@ -1,28 +1,29 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import PriceSlider from "../general/PriceSlider";
-import data from "../general/json/data.json";
 import RatingFilterDropdown from "../general/RatingFilterDropdown";
 import CategoryDropdown from "../general/CategoryDropdown";
+import ImageToggle from "../general/ImageToggle";
+import data from "../general/json/data.json";
 
 const Body = () => {
+  // State variables
   const [firstImageActive, setFirstImageActive] = useState(false);
   const [secondImageActive, setSecondImageActive] = useState(false);
   const [selectedRatings, setSelectedRatings] = useState([]);
-  const [priceRange, setPriceRange] = useState([1, 1000]); // Adjusted price range
+  const [priceRange, setPriceRange] = useState([1, 1000]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedSort, setSelectedSort] = useState("relevance");
+  const [showMore, setShowMore] = useState(false);
 
-  console.log(selectedCategories);
-
-  const [sortOptions, setSortOptions] = useState([
+  // Sort options
+  const sortOptions = [
     { value: "relevance", label: "Relevance" },
     { value: "priceLowToHigh", label: "Price (Low to High)" },
     { value: "priceHighToLow", label: "Price (High to Low)" },
+  ];
 
-  
-  ]);
-
+  // Toggle image functions
   const toggleFirstImage = () => {
     setFirstImageActive(!firstImageActive);
     setSecondImageActive(false);
@@ -33,26 +34,25 @@ const Body = () => {
     setFirstImageActive(false);
   };
 
-  // sort logic here
-
+  // Sorting products function
   const sortProducts = (data, selectedSort) => {
     switch (selectedSort) {
       case "priceLowToHigh":
-        return data.sort((a, b) => a.price - b.price);
+        return data.slice().sort((a, b) => a.price - b.price);
       case "priceHighToLow":
-        return data.sort((a, b) => b.price - a.price);
-      // Handle other sorting options here
+        return data.slice().sort((a, b) => b.price - a.price);
       default:
         return data;
     }
   };
 
+  // Handle sort change
   const handleSortChange = (event) => {
     setSelectedSort(event.target.value);
   };
 
-  // Apply filtering based on selected ratings, price range, and brands
-  let filteredData = data.filter((product) => {
+  // Filter data based on selected criteria
+  const filteredData = data.filter((product) => {
     const averageRating = product.average_rating;
     const price = product.price;
     return (
@@ -66,22 +66,34 @@ const Body = () => {
   });
 
   // Apply sorting
-  filteredData = sortProducts(filteredData, selectedSort);
+  const sortedData = sortProducts(filteredData, selectedSort);
+
+  // Determine number of items to display
+  const initialItemsToShow = 12;
+  const itemsToShow = showMore ? sortedData.length : initialItemsToShow;
 
   return (
     <div className="my-10">
-      <div className="wrapper flex gap-10">
-        {/* Rating Filter Dropdown */}
-        <RatingFilterDropdown onChange={setSelectedRatings} />
-        <div className="border border-[#D1D5DB] rounded-lg px-5 flex flex-col items-center justify-center ">
-          {/* Price Slider */}
-          <PriceSlider priceRange={priceRange} setPriceRange={setPriceRange} />
-        </div>
-        {/* categories dropdown  */}
-        <CategoryDropdown onChange={setSelectedCategories} />
+      {/* Filter section */}
+      <div className="wrapper flex justify-between">
+        <div className="flex gap-5">
+          {/* Rating filter */}
+          <RatingFilterDropdown onChange={setSelectedRatings} />
 
-        {/* Sort Dropdown */}
-        <div className="self-end pt-10 pr-10">
+          {/* Category filter */}
+          <CategoryDropdown onChange={setSelectedCategories} />
+
+          {/* Price slider */}
+          <div className="border border-[#D1D5DB] rounded-lg px-5 flex flex-col items-center justify-center">
+            <PriceSlider
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+            />
+          </div>
+        </div>
+
+        {/* Sort dropdown */}
+        <div>
           <label htmlFor="sort" className="text-gray-700 mb-2 mr-2 font-light">
             Sort by:
           </label>
@@ -100,41 +112,49 @@ const Body = () => {
           </select>
         </div>
       </div>
+
+      {/* Image toggle */}
       <div className="wrapper flex justify-between my-5">
         <p className="text-xl">
           Stays nearby: <span className="font-semibold">All</span>
         </p>
-        <div className="flex gap-5">
-          <img
-            src="src\assets\images\Frame 25.png"
-            alt="logo"
-            onClick={toggleFirstImage}
-            className={firstImageActive ? "active" : ""}
-          />
-          <img
-            src="src\assets\images\Frame 24.png"
-            alt="logo"
-            onClick={toggleSecondImage}
-            className={secondImageActive ? "active" : ""}
-          />
-        </div>
+
+        <ImageToggle
+          image1Src="src\assets\images\Frame 25.png"
+          image2Src="src\assets\images\Frame 24.png"
+          active={firstImageActive}
+          onClick={toggleFirstImage}
+        />
       </div>
+
+      {/* Product Cards */}
       <div
         className={`flex flex-wrap wrapper ${
           filteredData.length < 3 ? "justify-evenly" : "justify-between"
         }`}
       >
-        {/* Map over filtered data and render ProductCard for each item */}
-        {filteredData.length === 0 ? (
-          <div className="flex items-center justify-center w-full text-2xl font-medium text-gray-400 h-[50vh]">
-            No Items Found...
-          </div>
+        {filteredData.length > 0 ? (
+          sortedData
+            .slice(0, itemsToShow)
+            .map((product, index) => <ProductCard key={index} data={product} />)
         ) : (
-          filteredData.map((product, index) => (
-            <ProductCard key={index} data={product} />
-          ))
+          <div className="text-center h-[40vh] flex justify-center items-center text-xl font-normal text-gray-400">
+            No items found...
+          </div>
         )}
       </div>
+
+      {/* Show More button */}
+      {filteredData.length > initialItemsToShow && (
+        <div className="flex justify-center mt-4">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

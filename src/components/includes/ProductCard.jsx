@@ -1,8 +1,17 @@
-// ProductCard.jsx
+import React, { useState } from "react";
 import { IoMdStar } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = ({ data }) => {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+    toast.success(isFavorite ? "Removed from favorites" : "Added to favorites");
+  };
+
   return (
     <>
       <div
@@ -10,7 +19,11 @@ const ProductCard = ({ data }) => {
         key={data.name}
       >
         <div className="w-[100%]">
-          <img className="w-[100%] rounded-t-xl" src={data.image_url} alt={data.name} />
+          <img
+            className="w-[100%] rounded-t-xl"
+            src={data.image_url}
+            alt={data.name}
+          />
         </div>
         <div className="p-4">
           <div className="flex justify-between items-center mb-3">
@@ -39,7 +52,12 @@ const ProductCard = ({ data }) => {
             </p>
           </div>
         </div>
-        <div className="bg-[#F5F5F5] absolute top-4 right-4 rounded-full w-7 h-7 flex justify-center items-center hover:bg-red-400">
+        <div
+          className={`bg-[#F5F5F5] absolute top-4 right-4 rounded-full w-7 h-7 flex justify-center items-center ${
+            isFavorite ? "bg-red-400" : "text-gray-500 hover:bg-red-400"
+          }`}
+          onClick={toggleFavorite}
+        >
           <CiHeart />
         </div>
       </div>

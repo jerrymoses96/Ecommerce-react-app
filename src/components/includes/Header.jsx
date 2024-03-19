@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../App.css";
 
 const Header = () => {
@@ -11,11 +12,11 @@ const Header = () => {
     >
       <div className="wrapper flex justify-between items-center">
         <div>
-          <h1>
-            <img src="src\assets\images\logo.png" />
-          </h1>
-          
-          
+          <Link to={"/"}>
+            <h1>
+              <img src="src\assets\images\logo.png" alt="logo" />
+            </h1>
+          </Link>
         </div>
         <div>
           <ul className="flex gap-5 items-center font-normal ">

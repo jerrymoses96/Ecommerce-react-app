@@ -136,7 +136,7 @@ const Body = () => {
         {filteredData.length > 0 ? (
           sortedData
             .slice(0, itemsToShow)
-            .map((product, index) => <ProductCard key={index} data={product} />)
+            .map((product, index) =>  <ProductCard key={index} data={product} />)
         ) : (
           <div className="text-center h-[40vh] flex justify-center items-center text-xl font-normal text-gray-400">
             No items found...

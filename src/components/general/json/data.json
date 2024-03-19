@@ -6,7 +6,14 @@
     "price": 275,
     "average_rating": 4.2,
     "price_chart": true,
-    "image_url": "src/assets/images/listing image.png",
+    "image_url": [
+      "src/assets/images/listing image.png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
+
     "categories": "Cabin",
     "reviews": [
       {
@@ -40,7 +47,13 @@
     "price": 512,
     "average_rating": 3.8,
     "price_chart": false,
-    "image_url": "src/assets/images/image.png",
+    "image_url": [
+      "src/assets/images/image.png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cottages",
     "reviews": [
       {
@@ -74,7 +87,13 @@
     "price": 689,
     "average_rating": 4.6,
     "price_chart": false,
-    "image_url": "src/assets/images/image (1).png",
+    "image_url": [
+      "src/assets/images/image (1).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cottages",
     "reviews": [
       {
@@ -108,7 +127,13 @@
     "price": 420,
     "average_rating": 4.0,
     "price_chart": true,
-    "image_url": "src/assets/images/image (2).png",
+    "image_url": [
+      "src/assets/images/image (2).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Lodge",
     "reviews": [
       {
@@ -142,7 +167,13 @@
     "price": 620,
     "average_rating": 4.5,
     "price_chart": true,
-    "image_url": "src/assets/images/image (3).png",
+    "image_url": [
+      "src/assets/images/image (3).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Villa",
     "reviews": [
       {
@@ -176,7 +207,13 @@
     "price": 380,
     "average_rating": 4.2,
     "price_chart": true,
-    "image_url": "src/assets/images/image (4).png",
+    "image_url": [
+      "src/assets/images/image (4).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cabin",
     "reviews": [
       {
@@ -210,7 +247,13 @@
     "price": 740,
     "average_rating": 4.8,
     "price_chart": false,
-    "image_url": "src/assets/images/image (5).png",
+    "image_url": [
+      "src/assets/images/image (5).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Lodge",
     "reviews": [
       {
@@ -244,7 +287,13 @@
     "price": 310,
     "average_rating": 4.0,
     "price_chart": false,
-    "image_url": "src/assets/images/image (6).png",
+    "image_url": [
+      "src/assets/images/image (6).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cabin",
     "reviews": [
       {
@@ -278,7 +327,13 @@
     "price": 880,
     "average_rating": 4.9,
     "price_chart": true,
-    "image_url": "src/assets/images/image (7).png",
+    "image_url": [
+      "src/assets/images/image (7).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Chalet",
     "reviews": [
       {
@@ -312,7 +367,13 @@
     "price": 480,
     "average_rating": 4.3,
     "price_chart": false,
-    "image_url": "src/assets/images/image (8).png",
+    "image_url": [
+      "src/assets/images/image (8).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cottage",
     "reviews": [
       {
@@ -346,7 +407,13 @@
     "price": 420,
     "average_rating": 4.6,
     "price_chart": true,
-    "image_url": "src/assets/images/image (9).png",
+    "image_url": [
+      "src/assets/images/image (9).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cabin",
     "reviews": [
       {
@@ -380,7 +447,13 @@
     "price": 620,
     "average_rating": 4.7,
     "price_chart": false,
-    "image_url": "src/assets/images/image (10).png",
+    "image_url": [
+      "src/assets/images/image (10).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Lodge",
     "reviews": [
       {
@@ -414,7 +487,13 @@
     "price": 750,
     "average_rating": 4.8,
     "price_chart": true,
-    "image_url": "src/assets/images/image (11).png",
+    "image_url": [
+      "src/assets/images/image (11).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cottage",
     "reviews": [
       {
@@ -448,7 +527,13 @@
     "price": 550,
     "average_rating": 4.5,
     "price_chart": false,
-    "image_url": "src/assets/images/image (12).png",
+    "image_url": [
+      "src/assets/images/image (12).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cabin",
     "reviews": [
       {
@@ -482,7 +567,13 @@
     "price": 950,
     "average_rating": 4.9,
     "price_chart": true,
-    "image_url": "src/assets/images/image (13).png",
+    "image_url": [
+      "src/assets/images/image (13).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Villa",
     "reviews": [
       {
@@ -516,7 +607,13 @@
     "price": 123,
     "average_rating": 3.9,
     "price_chart": true,
-    "image_url": "src/assets/images/image (14).png",
+    "image_url": [
+      "src/assets/images/image (14).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cabin",
     "reviews": [
       {
@@ -550,7 +647,13 @@
     "price": 264,
     "average_rating": 4.3,
     "price_chart": false,
-    "image_url": "src/assets/images/image (5).png",
+    "image_url": [
+      "src/assets/images/image (5).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Retreat",
     "reviews": [
       {
@@ -584,7 +687,13 @@
     "price": 312,
     "average_rating": 4.6,
     "price_chart": true,
-    "image_url": "src/assets/images/image (6).png",
+    "image_url": [
+      "src/assets/images/image (6).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Cottage",
     "reviews": [
       {
@@ -618,7 +727,13 @@
     "price": 488,
     "average_rating": 3.7,
     "price_chart": false,
-    "image_url": "src/assets/images/image (7).png",
+    "image_url": [
+      "src/assets/images/image (7).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Chalet",
     "reviews": [
       {
@@ -652,7 +767,13 @@
     "price": 543,
     "average_rating": 4.1,
     "price_chart": true,
-    "image_url": "src/assets/images/image (8).png",
+    "image_url": [
+      "src/assets/images/image (8).png",
+      "src/assets/images/slider-1.jpg",
+      "src/assets/images/slider-2.jpg",
+      "src/assets/images/slider-3.jpg",
+      "src/assets/images/slider-4.jpg"
+    ],
     "categories": "Villa",
     "reviews": [
       {

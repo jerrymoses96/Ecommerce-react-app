@@ -3,25 +3,35 @@ import { IoMdStar } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const navigate = useNavigate();
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);
     toast.success(isFavorite ? "Removed from favorites" : "Added to favorites");
   };
 
+
+  const viewProduct = (id) => {
+    navigate(`/viewaccomodation/${id}`);
+  }
+
   return (
+
     <>
+    
       <div
         className="rounded-xl shadow-md w-[23.5%] relative mb-7"
         key={data.name}
+        onClick={() => viewProduct(data.id)}
       >
         <div className="w-[100%]">
           <img
             className="w-[100%] rounded-t-xl"
-            src={data.image_url}
+            src={data.image_url[0]}
             alt={data.name}
           />
         </div>

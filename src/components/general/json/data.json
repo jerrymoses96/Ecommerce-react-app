@@ -7,7 +7,29 @@
     "average_rating": 4.2,
     "price_chart": true,
     "image_url": "src/assets/images/listing image.png",
-    "categories": "Cabin"
+    "categories": "Cabin",
+    "reviews": [
+      {
+        "name": "Emily",
+        "date": "December 2023",
+        "review": "Absolutely loved our stay at Brightwoods Cabin! The cozy atmosphere combined with stunning surroundings made for a perfect getaway. Highly recommend!",
+        "rating": 5
+      },
+      {
+        "name": "Michael",
+        "date": "December 2023",
+        "review": "The cabin was clean and well-maintained. The hosts were very accommodating and provided excellent communication throughout our stay. Will definitely be coming back!",
+        "rating": 4.5
+      },
+      {
+        "name": "Sophie",
+        "date": "December 2023",
+        "review": "Such a serene retreat! The cabin had everything we needed for a comfortable stay. Waking up to the sounds of nature was truly rejuvenating. Can't wait to return!",
+        "rating": 4.8
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Cozy cabin in Bridlepath, Ontario, offering a perfect escape with its serene atmosphere and beautiful surroundings."
   },
   {
     "id": 2,
@@ -17,7 +39,29 @@
     "average_rating": 3.8,
     "price_chart": false,
     "image_url": "src/assets/images/image.png",
-    "categories": "Cottages"
+    "categories": "Cottages",
+    "reviews": [
+      {
+        "name": "John",
+        "date": "December 2023",
+        "review": "The Urban Loft was spacious and beautifully decorated. The views of Georgina Bay were breathtaking. However, the lack of some basic amenities was a bit disappointing.",
+        "rating": 4.0
+      },
+      {
+        "name": "Rachel",
+        "date": "December 2023",
+        "review": "The loft's location was perfect for exploring the nearby attractions. The check-in process was smooth, and the host provided helpful recommendations for local dining options.",
+        "rating": 4.2
+      },
+      {
+        "name": "David",
+        "date": "December 2023",
+        "review": "Had a fantastic weekend at the Urban Loft! The modern design and amenities exceeded our expectations. Would definitely recommend it to anyone visiting the area.",
+        "rating": 4.7
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Stylish loft in Georgina Bay, Ontario, providing breathtaking views and modern comforts for an unforgettable stay."
   },
   {
     "id": 3,
@@ -27,7 +71,29 @@
     "average_rating": 4.6,
     "price_chart": false,
     "image_url": "src/assets/images/image (1).png",
-    "categories": "Cottages"
+    "categories": "Cottages",
+    "reviews": [
+      {
+        "name": "Liam",
+        "date": "December 2023",
+        "review": "Our stay at Farestville Cottages was nothing short of magical! The cottages were charming, and the surroundings were picturesque. A perfect place to unwind and connect with nature.",
+        "rating": 5
+      },
+      {
+        "name": "Emma",
+        "date": "December 2023",
+        "review": "The cottages were clean and well-equipped with everything we needed for a comfortable stay. The host was friendly and responsive to our inquiries. Will definitely return!",
+        "rating": 4.8
+      },
+      {
+        "name": "Oliver",
+        "date": "December 2023",
+        "review": "Spent a relaxing weekend at Farestville Cottages with my family. The kids loved exploring the nearby trails, and we enjoyed roasting marshmallows by the fire pit. Can't wait to visit again!",
+        "rating": 4.9
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Charming cottages in Simcoe, Ontario, nestled amidst picturesque landscapes, offering a magical retreat to unwind and connect with nature."
   },
   {
     "id": 4,
@@ -37,7 +103,29 @@
     "average_rating": 3.4,
     "price_chart": true,
     "image_url": "src/assets/images/image (2).png",
-    "categories": "Lodge"
+    "categories": "Lodge",
+    "reviews": [
+      {
+        "name": "Sophia",
+        "date": "December 2023",
+        "review": "The Unionville Lodge provided a cozy and relaxing atmosphere for our weekend getaway. The staff were friendly and attentive to our needs. Enjoyed every moment of our stay!",
+        "rating": 4.2
+      },
+      {
+        "name": "William",
+        "date": "December 2023",
+        "review": "Had a pleasant stay at Unionville Lodge. The lodge was clean, and the amenities were well-maintained. Will consider staying here again in the future.",
+        "rating": 3.8
+      },
+      {
+        "name": "Ella",
+        "date": "December 2023",
+        "review": "The location of Unionville Lodge was convenient for exploring the nearby attractions. However, the room was smaller than expected. Overall, an average experience.",
+        "rating": 3.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Quaint lodge in Markham, Ontario, offering a cozy retreat with convenient access to nearby attractions."
   },
   {
     "id": 5,
@@ -47,7 +135,29 @@
     "average_rating": 4.9,
     "price_chart": true,
     "image_url": "src/assets/images/image (3).png",
-    "categories": "Cabin"
+    "categories": "Cabin",
+    "reviews": [
+      {
+        "name": "Ava",
+        "date": "December 2023",
+        "review": "Staying at the Mississauga Airstream was a unique and memorable experience. The cozy interior and surrounding nature made for a perfect weekend escape. Highly recommend!",
+        "rating": 5
+      },
+      {
+        "name": "Noah",
+        "date": "December 2023",
+        "review": "The Airstream was clean and well-equipped with all necessary amenities. The hosts were friendly and provided clear instructions for check-in. Would love to come back again!",
+        "rating": 4.9
+      },
+      {
+        "name": "Olivia",
+        "date": "December 2023",
+        "review": "Had a fantastic time at the Mississauga Airstream! The location was peaceful, and the Airstream itself was charming. Perfect for a romantic getaway.",
+        "rating": 5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Unique Airstream experience in Mississauga, Ontario, offering a cozy interior and natural surroundings for a memorable escape."
   },
   {
     "id": 6,
@@ -57,7 +167,29 @@
     "average_rating": 2.7,
     "price_chart": false,
     "image_url": "src/assets/images/image (4).png",
-    "categories": "Home"
+    "categories": "Home",
+    "reviews": [
+      {
+        "name": "Emma",
+        "date": "December 2023",
+        "review": "Our stay at Niagara Homes was disappointing. The house was not as clean as expected, and some amenities were not functioning properly. Expected better for the price.",
+        "rating": 2.0
+      },
+      {
+        "name": "Liam",
+        "date": "December 2023",
+        "review": "The location of Niagara Homes was convenient for exploring the Niagara region. However, the house itself was outdated and in need of maintenance.",
+        "rating": 3.0
+      },
+      {
+        "name": "Isabella",
+        "date": "December 2023",
+        "review": "The size of the house at Niagara Homes was spacious enough for our group, but the overall cleanliness and condition of the property left much to be desired. Would not recommend.",
+        "rating": 2.5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Spacious home in Niagara, Ontario, offering convenience for exploring the region, with scenic surroundings perfect for relaxation."
   },
   {
     "id": 7,
@@ -67,7 +199,29 @@
     "average_rating": 4.1,
     "price_chart": true,
     "image_url": "src/assets/images/image (5).png",
-    "categories": "Estate"
+    "categories": "Estate",
+    "reviews": [
+      {
+        "name": "James",
+        "date": "December 2023",
+        "review": "Our stay at Sunny Estate was delightful! The property was well-maintained, and the amenities exceeded our expectations. Would highly recommend it for a relaxing getaway!",
+        "rating": 4.5
+      },
+      {
+        "name": "Sophie",
+        "date": "December 2023",
+        "review": "The location of Sunny Estate was convenient, and the estate itself was spacious and comfortable. Enjoyed our time spent here and would consider returning in the future.",
+        "rating": 4.2
+      },
+      {
+        "name": "William",
+        "date": "December 2023",
+        "review": "Had a pleasant experience at Sunny Estate. The estate provided a serene atmosphere for a weekend retreat. However, some minor issues with cleanliness were noted.",
+        "rating": 3.8
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Serene estate in Barcort, Ontario, boasting well-maintained properties and relaxing amenities for a tranquil retreat."
   },
   {
     "id": 8,
@@ -77,7 +231,29 @@
     "average_rating": 3.2,
     "price_chart": false,
     "image_url": "src/assets/images/image (6).png",
-    "categories": "Hills"
+    "categories": "Hills",
+    "reviews": [
+      {
+        "name": "Oliver",
+        "date": "December 2023",
+        "review": "The Lawrence Hills offered breathtaking views and a peaceful atmosphere. However, the accommodation was lacking in terms of cleanliness and amenities.",
+        "rating": 3.0
+      },
+      {
+        "name": "Charlotte",
+        "date": "December 2023",
+        "review": "The location of Lawrence Hills was stunning, but the accommodations did not meet our expectations. Improvement needed in maintenance and cleanliness.",
+        "rating": 2.5
+      },
+      {
+        "name": "Alexander",
+        "date": "December 2023",
+        "review": "Disappointing stay at Lawrence Hills. The property was not well-maintained, and the lack of amenities made for an uncomfortable experience. Would not recommend.",
+        "rating": 2.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Scenic hills accommodation in Lawrence, Ontario, offering breathtaking views and a peaceful atmosphere for a relaxing stay."
   },
   {
     "id": 9,
@@ -87,7 +263,29 @@
     "average_rating": 4.4,
     "price_chart": false,
     "image_url": "src/assets/images/image (7).png",
-    "categories": "Lodge"
+    "categories": "Lodge",
+    "reviews": [
+      {
+        "name": "Ethan",
+        "date": "December 2023",
+        "review": "Our stay at Simcoe Lake Lodge exceeded our expectations! The lodge was spacious, clean, and well-equipped. The surrounding lake views were breathtaking. Would definitely return!",
+        "rating": 4.8
+      },
+      {
+        "name": "Madison",
+        "date": "December 2023",
+        "review": "The lodge at Simcoe Lake Lodge provided a cozy and comfortable retreat. The staff were friendly, and the amenities were top-notch. Highly recommend!",
+        "rating": 4.5
+      },
+      {
+        "name": "Jacob",
+        "date": "December 2023",
+        "review": "Had a fantastic time at Simcoe Lake Lodge! The lodge was perfect for our group getaway. The lakefront location added to the charm of the property. Would love to visit again!",
+        "rating": 4.7
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Spacious lodge in Simcoe, Ontario, providing breathtaking lake views and top-notch amenities for a memorable getaway."
   },
   {
     "id": 10,
@@ -97,108 +295,348 @@
     "average_rating": 3.6,
     "price_chart": true,
     "image_url": "src/assets/images/image (8).png",
-    "categories": "Homes"
+    "categories": "Homes",
+    "reviews": [
+      {
+        "name": "Aiden",
+        "date": "December 2023",
+        "review": "Our stay at Wasaga Beach Homes was enjoyable. The homes were cozy and well-furnished, providing a comfortable retreat after a day at the beach. Would recommend for a budget-friendly stay!",
+        "rating": 4.0
+      },
+      {
+        "name": "Sophia",
+        "date": "December 2023",
+        "review": "The homes at Wasaga Beach Homes were clean and conveniently located near the beach. The check-in process was smooth, and the host was responsive to our inquiries.",
+        "rating": 3.8
+      },
+      {
+        "name": "Logan",
+        "date": "December 2023",
+        "review": "Great value for money at Wasaga Beach Homes! The homes were simple but comfortable, offering everything we needed for a beach getaway. Would consider staying here again!",
+        "rating": 3.5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Cozy homes near Wasaga Beach in Georgina Bay, Ontario, providing a comfortable retreat after a day of beach activities."
   },
   {
     "id": 11,
-    "name": "Banff Hills",
-    "location": "Banff, Alberta, Canada",
-    "price": 872,
-    "average_rating": 4.8,
-    "price_chart": true,
+    "name": "Brampton Hillside Retreat",
+    "location": "Brampton, Ontario, Canada",
+    "price": 394,
+    "average_rating": 4.0,
+    "price_chart": false,
     "image_url": "src/assets/images/image (9).png",
-    "categories": "Hills"
+    "categories": "Retreat",
+    "reviews": [
+      {
+        "name": "Evelyn",
+        "date": "December 2023",
+        "review": "Our stay at Brampton Hillside Retreat was wonderful! The retreat offered stunning views and a peaceful atmosphere. The accommodations were comfortable, and the staff were friendly. Highly recommend!",
+        "rating": 4.5
+      },
+      {
+        "name": "Jack",
+        "date": "December 2023",
+        "review": "The accommodations at Brampton Hillside Retreat were clean and spacious, with all necessary amenities provided. The retreat's location was perfect for a relaxing getaway.",
+        "rating": 4.2
+      },
+      {
+        "name": "Mia",
+        "date": "December 2023",
+        "review": "Had a great time at Brampton Hillside Retreat! The accommodations exceeded our expectations, and the views were breathtaking. Would love to visit again!",
+        "rating": 4.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Scenic retreat in Brampton, Ontario, offering stunning views and comfortable accommodations for a peaceful getaway."
   },
   {
     "id": 12,
-    "name": "Creemore Canada",
-    "location": "Creemore, Alberta, Canada",
-    "price": 503,
-    "average_rating": 2.9,
-    "price_chart": false,
+    "name": "Oakville Lakefront Cottage",
+    "location": "Oakville, Ontario, Canada",
+    "price": 297,
+    "average_rating": 4.7,
+    "price_chart": true,
     "image_url": "src/assets/images/image (10).png",
-    "categories": "Estate"
+    "categories": "Cottage",
+    "reviews": [
+      {
+        "name": "Ethan",
+        "date": "December 2023",
+        "review": "Our stay at Oakville Lakefront Cottage was amazing! The cottage was cozy and well-equipped, and the lakefront views were breathtaking. Highly recommend for a relaxing getaway!",
+        "rating": 4.9
+      },
+      {
+        "name": "Olivia",
+        "date": "December 2023",
+        "review": "The cottage at Oakville Lakefront Cottage was charming and comfortable. The location was perfect for exploring the area, and the host was very accommodating. Would love to return!",
+        "rating": 4.8
+      },
+      {
+        "name": "Noah",
+        "date": "December 2023",
+        "review": "Had a fantastic time at Oakville Lakefront Cottage! The cottage was clean, cozy, and well-maintained, with stunning views of the lake. Perfect for a weekend getaway!",
+        "rating": 4.5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Charming cottage on the lakefront in Oakville, Ontario, offering cozy accommodations and breathtaking views for a relaxing escape."
   },
   {
     "id": 13,
-    "name": "Kawartha Lakes",
-    "location": "Kawartha, Alberta, Canada",
-    "price": 187,
-    "average_rating": 4.3,
+    "name": "Vaughan Mountain Chalet",
+    "location": "Vaughan, Ontario, Canada",
+    "price": 531,
+    "average_rating": 4.2,
     "price_chart": false,
     "image_url": "src/assets/images/image (11).png",
-    "categories": "Lakes"
+    "categories": "Chalet",
+    "reviews": [
+      {
+        "name": "William",
+        "date": "December 2023",
+        "review": "Our stay at Vaughan Mountain Chalet was exceptional! The chalet was spacious, clean, and well-furnished, with stunning views of the surrounding mountains. Would highly recommend it!",
+        "rating": 4.8
+      },
+      {
+        "name": "Emma",
+        "date": "December 2023",
+        "review": "The chalet at Vaughan Mountain Chalet was perfect for our group getaway. The amenities were top-notch, and the location offered easy access to outdoor activities. Would love to visit again!",
+        "rating": 4.5
+      },
+      {
+        "name": "James",
+        "date": "December 2023",
+        "review": "Had an amazing time at Vaughan Mountain Chalet! The chalet exceeded our expectations, and the mountain views were breathtaking. Perfect for a relaxing retreat!",
+        "rating": 4.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Spacious chalet in Vaughan, Ontario, offering breathtaking mountain views and top-notch amenities for a memorable retreat."
   },
   {
     "id": 14,
-    "name": "Revelstoke Cabin",
-    "location": "Revelstoke, Alberta, Canada",
-    "price": 397,
-    "average_rating": 3.7,
+    "name": "Markham Farmhouse",
+    "location": "Markham, Ontario, Canada",
+    "price": 182,
+    "average_rating": 3.8,
     "price_chart": true,
     "image_url": "src/assets/images/image (12).png",
-    "categories": "Cabin"
+    "categories": "Farmhouse",
+    "reviews": [
+      {
+        "name": "Ava",
+        "date": "December 2023",
+        "review": "Our stay at Markham Farmhouse was pleasant. The farmhouse was cozy and rustic, offering a unique experience. Would recommend for a quiet retreat!",
+        "rating": 4.0
+      },
+      {
+        "name": "Liam",
+        "date": "December 2023",
+        "review": "The farmhouse at Markham Farmhouse was charming, and the surrounding countryside was beautiful. However, some improvements could be made in terms of cleanliness.",
+        "rating": 3.5
+      },
+      {
+        "name": "Sophia",
+        "date": "December 2023",
+        "review": "Enjoyed our time at Markham Farmhouse! The farmhouse had a cozy atmosphere, and the host was friendly and accommodating. Would consider returning in the future.",
+        "rating": 4.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Rustic farmhouse in Markham, Ontario, offering a cozy atmosphere and beautiful countryside views for a peaceful retreat."
   },
   {
     "id": 15,
-    "name": "Brightwoods Estate",
-    "location": "Brightwoods Estate",
-    "price": 52,
-    "average_rating": 2.5,
+    "name": "Pickering Beachfront Villa",
+    "location": "Pickering, Ontario, Canada",
+    "price": 406,
+    "average_rating": 4.5,
     "price_chart": false,
     "image_url": "src/assets/images/image (13).png",
-    "categories": "Estate"
+    "categories": "Villa",
+    "reviews": [
+      {
+        "name": "Oliver",
+        "date": "December 2023",
+        "review": "Our stay at Pickering Beachfront Villa was amazing! The villa was spacious, clean, and well-equipped, with stunning views of the beach. Highly recommend for a luxurious getaway!",
+        "rating": 4.9
+      },
+      {
+        "name": "Isabella",
+        "date": "December 2023",
+        "review": "The villa at Pickering Beachfront Villa exceeded our expectations! The accommodations were luxurious, and the beachfront location was perfect for a relaxing retreat. Would love to visit again!",
+        "rating": 4.7
+      },
+      {
+        "name": "Ethan",
+        "date": "December 2023",
+        "review": "Had an incredible time at Pickering Beachfront Villa! The villa was beautifully decorated and provided all the comforts of home. The beachfront views were breathtaking. Would definitely return!",
+        "rating": 4.2
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Luxurious beachfront villa in Pickering, Ontario, offering spacious accommodations and stunning views for a relaxing retreat."
   },
   {
     "id": 16,
-    "name": "Lightwoods Estate",
-    "location": "Lightwoods Estate",
-    "price": 928,
-    "average_rating": 4.0,
-    "price_chart": false,
+    "name": "Hamilton Riverside Cabin",
+    "location": "Hamilton, Ontario, Canada",
+    "price": 123,
+    "average_rating": 3.9,
+    "price_chart": true,
     "image_url": "src/assets/images/image (14).png",
-    "categories": "Estate"
-
+    "categories": "Cabin",
+    "reviews": [
+      {
+        "name": "Charlotte",
+        "date": "December 2023",
+        "review": "Our stay at Hamilton Riverside Cabin was enjoyable. The cabin was cozy and well-furnished, providing a comfortable retreat after a day of exploring. Would recommend!",
+        "rating": 4.2
+      },
+      {
+        "name": "Jacob",
+        "date": "December 2023",
+        "review": "The cabin at Hamilton Riverside Cabin offered a peaceful atmosphere and scenic views of the river. However, some minor maintenance issues were noted.",
+        "rating": 4.0
+      },
+      {
+        "name": "Evelyn",
+        "date": "December 2023",
+        "review": "Had a great time at Hamilton Riverside Cabin! The cabin was clean and comfortable, and the location was perfect for exploring the Hamilton area. Would consider staying here again!",
+        "rating": 3.5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Cozy cabin in Hamilton, Ontario, offering a peaceful atmosphere and scenic views of the river for a relaxing retreat."
   },
-  
   {
     "id": 17,
-    "name": "Whistler Chalet",
-    "location": "Whistler, British Columbia, Canada",
-    "price": 789,
-    "average_rating": 4.5,
-    "price_chart": true,
-    "image_url": "src/assets/images/image (2).png",
-    "categories": "Cabin"
+    "name": "Ajax Lakeside Retreat",
+    "location": "Ajax, Ontario, Canada",
+    "price": 264,
+    "average_rating": 4.3,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (5).png",
+    "categories": "Retreat",
+    "reviews": [
+      {
+        "name": "Jack",
+        "date": "December 2023",
+        "review": "Our stay at Ajax Lakeside Retreat was fantastic! The retreat offered beautiful lake views and a peaceful atmosphere. The accommodations were comfortable and well-equipped. Highly recommend!",
+        "rating": 4.8
+      },
+      {
+        "name": "Mia",
+        "date": "December 2023",
+        "review": "The accommodations at Ajax Lakeside Retreat exceeded our expectations! The retreat provided everything we needed for a relaxing getaway, and the lake views were breathtaking. Would love to visit again!",
+        "rating": 4.5
+      },
+      {
+        "name": "William",
+        "date": "December 2023",
+        "review": "Had an amazing time at Ajax Lakeside Retreat! The accommodations were clean, cozy, and well-maintained, with stunning views of the lake. Perfect for a weekend retreat!",
+        "rating": 4.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Tranquil lakeside retreat in Ajax, Ontario, offering beautiful lake views and comfortable accommodations for a relaxing getaway."
   },
   {
     "id": 18,
-    "name": "Rocky Mountain Retreat",
-    "location": "Banff, Alberta, Canada",
-    "price": 649,
-    "average_rating": 4.7,
-    "price_chart": false,
-    "image_url": "src/assets/images/image (7).png",
-    "categories": "Estate"
+    "name": "Kingston Seaside Cottage",
+    "location": "Kingston, Ontario, Canada",
+    "price": 312,
+    "average_rating": 4.6,
+    "price_chart": true,
+    "image_url": "src/assets/images/image (6).png",
+    "categories": "Cottage",
+    "reviews": [
+      {
+        "name": "Sophie",
+        "date": "December 2023",
+        "review": "Our stay at Kingston Seaside Cottage was amazing! The cottage was cozy, clean, and well-equipped, with stunning views of the seaside. Highly recommend for a peaceful retreat!",
+        "rating": 4.9
+      },
+      {
+        "name": "James",
+        "date": "December 2023",
+        "review": "The cottage at Kingston Seaside Cottage was perfect for our family getaway. The accommodations were comfortable, and the seaside location was beautiful. Would love to visit again!",
+        "rating": 4.7
+      },
+      {
+        "name": "Emma",
+        "date": "December 2023",
+        "review": "Had a wonderful time at Kingston Seaside Cottage! The cottage exceeded our expectations, and the seaside views were breathtaking. Perfect for a relaxing retreat!",
+        "rating": 4.5
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Cozy seaside cottage in Kingston, Ontario, offering comfortable accommodations and breathtaking views for a relaxing retreat."
   },
   {
     "id": 19,
-    "name": "Sunset Beach Bungalow",
-    "location": "Vancouver Island, British Columbia, Canada",
-    "price": 369,
-    "average_rating": 4.3,
-    "price_chart": true,
-    "image_url": "src/assets/images/image (11).png",
-    "categories": "Cabin"
+    "name": "Whitby Hilltop Chalet",
+    "location": "Whitby, Ontario, Canada",
+    "price": 488,
+    "average_rating": 3.7,
+    "price_chart": false,
+    "image_url": "src/assets/images/image (7).png",
+    "categories": "Chalet",
+    "reviews": [
+      {
+        "name": "Olivia",
+        "date": "December 2023",
+        "review": "Our stay at Whitby Hilltop Chalet was enjoyable. The chalet was spacious and well-equipped, providing a comfortable retreat after a day of exploring. Would recommend!",
+        "rating": 4.0
+      },
+      {
+        "name": "Noah",
+        "date": "December 2023",
+        "review": "The chalet at Whitby Hilltop Chalet offered stunning views of the surrounding hills. However, some improvements could be made in terms of cleanliness and maintenance.",
+        "rating": 3.5
+      },
+      {
+        "name": "Ava",
+        "date": "December 2023",
+        "review": "Enjoyed our time at Whitby Hilltop Chalet! The chalet provided a cozy atmosphere, and the location was perfect for exploring the Whitby area. Would consider returning in the future.",
+        "rating": 3.8
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Spacious chalet in Whitby, Ontario, offering stunning views of the surrounding hills and a cozy atmosphere for a relaxing retreat."
   },
   {
     "id": 20,
-    "name": "Mountain View Lodge",
-    "location": "Jasper, Alberta, Canada",
-    "price": 589,
-    "average_rating": 4.0,
+    "name": "Oshawa Lakeside Villa",
+    "location": "Oshawa, Ontario, Canada",
+    "price": 543,
+    "average_rating": 4.1,
     "price_chart": true,
-    "image_url": "src/assets/images/image (6).png",
-    "categories": "Lodge"
+    "image_url": "src/assets/images/image (8).png",
+    "categories": "Villa",
+    "reviews": [
+      {
+        "name": "Liam",
+        "date": "December 2023",
+        "review": "Our stay at Oshawa Lakeside Villa was fantastic! The villa was luxurious, clean, and well-equipped, with stunning views of the lake. Highly recommend for a relaxing getaway!",
+        "rating": 4.5
+      },
+      {
+        "name": "Sophia",
+        "date": "December 2023",
+        "review": "The villa at Oshawa Lakeside Villa exceeded our expectations! The accommodations were spacious and comfortable, and the lakefront location was perfect for a peaceful retreat. Would love to visit again!",
+        "rating": 4.2
+      },
+      {
+        "name": "Logan",
+        "date": "December 2023",
+        "review": "Had an amazing time at Oshawa Lakeside Villa! The villa was beautifully furnished and provided all the comforts of home. The lake views were breathtaking. Would definitely return!",
+        "rating": 4.0
+      }
+    ],
+    "total_reviews": 3,
+    "description": "Luxurious lakeside villa in Oshawa, Ontario, offering spacious accommodations and stunning views for a relaxing retreat."
   }
 ]

@@ -75,7 +75,7 @@ const Body = () => {
   return (
     <div className="my-10">
       {/* Filter section */}
-      <div className="wrapper flex justify-between">
+      <div className="wrapper flex justify-between shadow-md py-3 px-3 rounded-lg border border-green-200">
         <div className="flex gap-5">
           {/* Rating filter */}
           <RatingFilterDropdown onChange={setSelectedRatings} />
@@ -84,7 +84,7 @@ const Body = () => {
           <CategoryDropdown onChange={setSelectedCategories} />
 
           {/* Price slider */}
-          <div className="border border-[#D1D5DB] rounded-lg px-5 flex flex-col items-center justify-center">
+          <div className="border border-[#D1D5DB] rounded-lg px-5  flex flex-col items-center justify-center">
             <PriceSlider
               priceRange={priceRange}
               setPriceRange={setPriceRange}
@@ -114,7 +114,7 @@ const Body = () => {
       </div>
 
       {/* Image toggle */}
-      <div className="wrapper flex justify-between my-5">
+      <div className="wrapper flex justify-between items-center my-5">
         <p className="text-xl">
           Stays nearby: <span className="font-semibold">All</span>
         </p>
@@ -148,7 +148,7 @@ const Body = () => {
       {filteredData.length > initialItemsToShow && (
         <div className="flex justify-center mt-4">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="border-2 border-green-600 hover:bg-green-600 hover:text-white text-green-600 font-semibold py-2 px-4 rounded"
             onClick={() => setShowMore(!showMore)}
           >
             {showMore ? "Show Less" : "Show More"}

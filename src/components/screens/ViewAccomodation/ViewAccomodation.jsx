@@ -11,6 +11,9 @@ import Features from "./Features";
 import Amenities from "./Amenities";
 import Map from "./Map";
 import Review from "./Review";
+import SimilarStays from "./SimilarStays";
+import Footer from "../../includes/Footer";
+import Header from "../../includes/Header";
 
 const ViewAccommodation = () => {
   // Extracting ID parameter from URL
@@ -24,6 +27,7 @@ const ViewAccommodation = () => {
 
   return (
     <div className="w-full">
+      <Header/>
       {filteredAccommodation ? (
         <div>
           {/* Accommodation Details Section */}
@@ -51,9 +55,14 @@ const ViewAccommodation = () => {
 
           {/* review section  */}
           <div className="wrapper">
-            <Review data={filteredAccommodation.reviews}/>
+            <Review data={filteredAccommodation.reviews} />
           </div>
+          <div className="wrapper pb-16">
+            <SimilarStays category={filteredAccommodation.categories} />
+          </div>
+          <Footer/>
         </div>
+        
       ) : (
         // Displayed if no accommodation found with ID
         <div>No accommodation found with ID: {id}</div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { IoMdStar } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
+import { IoMdStar } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
   const [isFavorite, setIsFavorite] = useState(false);

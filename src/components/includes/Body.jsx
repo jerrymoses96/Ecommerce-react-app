@@ -1,10 +1,10 @@
 import { useState } from "react";
-import ProductCard from "./ProductCard";
-import PriceSlider from "../general/PriceSlider";
-import RatingFilterDropdown from "../general/RatingFilterDropdown";
 import CategoryDropdown from "../general/CategoryDropdown";
 import ImageToggle from "../general/ImageToggle";
+import PriceSlider from "../general/PriceSlider";
+import RatingFilterDropdown from "../general/RatingFilterDropdown";
 import data from "../general/json/data.json";
+import ProductCard from "./ProductCard";
 
 const Body = () => {
   // State variables

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { IoMdStar } from "react-icons/io";
 
 const Details = ({ data }) => {
@@ -14,16 +15,19 @@ const Details = ({ data }) => {
           {data.total_reviews} Reviews
         </span>
       </div>
-
-      <p className="text-[#171E1D] font-light mt-3">Welcome to our {data.description}</p>
+      <p className="text-[#171E1D] font-light mt-3">
+        Welcome to our {data.description}
+      </p>
       <div className="flex justify-between items-center mt-5">
         <p className="text-sm text-[#787878]">
-          <small className="text-2xl font-bold text-black">
-            ${data.price}
-          </small>
+          <small className="text-2xl font-bold text-black">${data.price}</small>
           /night
         </p>
-        <img className="w-[30%]" src="/src/assets\images\Frame 105.png" alt="image" />
+        <img
+          className="w-[30%]"
+          src="/src/assets/images/Frame 105.png"
+          alt="image"
+        />
       </div>
       <button className="bg-[#00C29F] w-full py-3 text-white font-semibold rounded-md shadow-md my-4">
         Book this home
@@ -32,18 +36,38 @@ const Details = ({ data }) => {
         <p className="text-[#787878]">Hosted by :</p>
         <div className="flex justify-between items-center mt-3 border-t border-t-green-100 pt-2">
           <div className="flex items-center gap-2">
-            <img src="/src\assets\images\Ellipse 2.png" alt="image" />
+            <img src="/src/assets/images/Ellipse 2.png" alt="image" />
             <div>
               <p className="font-semibold">Michelle Ward</p>
-              <p className="text-[#7A7A7A] text-sm">Joined in may 2021</p>
+              <p className="text-[#7A7A7A] text-sm">Joined in May 2021</p>
             </div>
           </div>
-
-          <img className="w-[20%]" src="/src\assets\images\Frame 23.png" alt="logo" />
+          <img
+            className="w-[20%]"
+            src="/src/assets/images/Frame 23.png"
+            alt="logo"
+          />
         </div>
       </div>
     </>
   );
+};
+
+// Prop types validation
+Details.propTypes = {
+  data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    average_rating: PropTypes.number.isRequired,
+    total_reviews: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    host: PropTypes.shape({
+      profilePicture: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      joinDate: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Details;

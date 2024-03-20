@@ -1,38 +1,65 @@
+import React from "react";
 import { useParams } from "react-router-dom";
-import data from "../../general/json/data.json";
-import ImageSlider from "./ImageSlider";
-import About from "./About";
 import "../../../App.css";
-import Details from "./Details";
+import data from "../../general/json/data.json";
 
-const ViewAccomodation = () => {
+// Importing Components
+import About from "./About";
+import Details from "./Details";
+import ImageSlider from "./ImageSlider";
+import Features from "./Features";
+import Amenities from "./Amenities";
+import Map from "./Map";
+import Review from "./Review";
+
+const ViewAccommodation = () => {
+  // Extracting ID parameter from URL
   const { id } = useParams();
   const accommodationId = parseInt(id);
 
-  // Assuming data is an array of accommodations
+  // Finding accommodation by ID
   const filteredAccommodation = data.find(
     (accommodation) => accommodation.id === accommodationId
   );
-  console.log(filteredAccommodation.image_url);
+
   return (
-    <div className="w-full ">
+    <div className="w-full">
       {filteredAccommodation ? (
-        <div className="flex wrapper gap-5">
-          <div className="w-[60%]">
-            <ImageSlider images={filteredAccommodation.image_url} />
-            <About data={filteredAccommodation} />
+        <div>
+          {/* Accommodation Details Section */}
+          <div className="flex wrapper gap-5 pb-5 border-b border-green-200">
+            {/* Image Slider and About Section */}
+            <div className="w-[60%]">
+              <ImageSlider images={filteredAccommodation.image_url} />
+              <About data={filteredAccommodation} />
+            </div>
+
+            {/* Details and Features Section */}
+            <div className="w-[40%]">
+              <div className="mt-10 mb-44 p-5 w-full border h-fit border-green-300 rounded-lg">
+                <Details data={filteredAccommodation} />
+              </div>
+              <Features />
+            </div>
           </div>
 
-          <div className="my-10 p-5 border h-fit border-green-300 rounded-lg w-[40%]">
-            <Details data={filteredAccommodation} />
+          {/* Amenities and Map Section */}
+          <div className="wrapper py-5 flex">
+            <Amenities />
+            <Map location={filteredAccommodation.location} />
           </div>
-          {/* Add more details as needed */}
+
+          {/* review section  */}
+          <div className="wrapper">
+            <Review data={filteredAccommodation.reviews}/>
+          </div>
         </div>
       ) : (
+        // Displayed if no accommodation found with ID
         <div>No accommodation found with ID: {id}</div>
       )}
     </div>
   );
 };
 
-export default ViewAccomodation;
+export default ViewAccommodation;

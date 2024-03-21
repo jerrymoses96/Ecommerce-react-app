@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppRoute from "./components/routing/AppRoute";
-import React from "react";
 
+export const Pathcontext = React.createContext();
 export const userContext = React.createContext();
 function App() {
+  // protected auth
+  const [pathname, setPathname] = useState(null);
   //authentication
   const [userdata, setuserdata] = useState({});
   const updateUserData = (action) => {
@@ -25,11 +27,13 @@ function App() {
   }, []);
 
   return (
-    <userContext.Provider value={{ userdata, updateUserData }}>
-      <div>
-        <AppRoute />
-      </div>
-    </userContext.Provider>
+    <Pathcontext.Provider value={{ setPathname }}>
+      <userContext.Provider value={{ userdata, updateUserData }}>
+        <div>
+          <AppRoute />
+        </div>
+      </userContext.Provider>
+    </Pathcontext.Provider>
   );
 }
 

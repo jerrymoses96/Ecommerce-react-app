@@ -1,11 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import Dropdown from "../screens/Dropdown";
+import { FaRegUserCircle } from "react-icons/fa";
+import { userContext } from "../../App";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
+
+  const { userdata } = useContext(userContext);
 
   const handleMouseEnter = () => {
     setShowDropdown(true);
@@ -56,11 +60,16 @@ const Header = () => {
               onMouseLeave={handleMouseLeave}
               ref={dropdownRef}
             >
-              <img
-                src="/src/assets/images/avatar.png"
-                alt="avatar"
-                className="cursor-pointer"
-              />
+              {userdata ? (
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt="avatar"
+                  className="cursor-pointer"
+                />
+              ) : (
+                <FaRegUserCircle size={24} />
+              )}
+
               {showDropdown && (
                 <div className="absolute top-14 right-16 bg-white p-2 shadow-md cursor-pointer rounded-md">
                   {/* Here you can place your login component */}

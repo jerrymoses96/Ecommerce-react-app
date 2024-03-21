@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchContext } from "../context/SearchContext";
 import CategoryDropdown from "../general/CategoryDropdown";
 import ImageToggle from "../general/ImageToggle";
 import PriceSlider from "../general/PriceSlider";
@@ -15,6 +16,10 @@ const Body = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedSort, setSelectedSort] = useState("relevance");
   const [showMore, setShowMore] = useState(false);
+  const { searchQuery, setSearchQuery } = useSearchContext();
+
+  // Filtered and sorted data
+  const [filteredData, setFilteredData] = useState([]);
 
   // Sort options
   const sortOptions = [
@@ -51,19 +56,23 @@ const Body = () => {
     setSelectedSort(event.target.value);
   };
 
-  // Filter data based on selected criteria
-  const filteredData = data.filter((product) => {
-    const averageRating = product.average_rating;
-    const price = product.price;
-    return (
-      (selectedRatings.length === 0 ||
-        selectedRatings.some((rating) => rating <= averageRating)) &&
-      price >= priceRange[0] &&
-      price <= priceRange[1] &&
-      (selectedCategories.length === 0 ||
-        selectedCategories.includes(product.categories))
-    );
-  });
+  // Update filtered data when searchQuery or other filters change
+  useEffect(() => {
+    const filtered = data.filter((product) => {
+      const averageRating = product.average_rating;
+      const price = product.price;
+      return (
+        (selectedRatings.length === 0 ||
+          selectedRatings.some((rating) => rating <= averageRating)) &&
+        price >= priceRange[0] &&
+        price <= priceRange[1] &&
+        (selectedCategories.length === 0 ||
+          selectedCategories.includes(product.categories)) &&
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) // Add search query filter here
+      );
+    });
+    setFilteredData(filtered);
+  }, [searchQuery, selectedRatings, priceRange, selectedCategories]);
 
   // Apply sorting
   const sortedData = sortProducts(filteredData, selectedSort);
@@ -75,7 +84,7 @@ const Body = () => {
   return (
     <div className="my-10">
       {/* Filter section */}
-      <div className="wrapper flex justify-between shadow-md py-3 px-3 rounded-lg border border-green-200">
+      <div className="wrapper flex justify-between py-3 px-3 rounded-lg border border-green-200">
         <div className="flex gap-5">
           {/* Rating filter */}
           <RatingFilterDropdown onChange={setSelectedRatings} />
@@ -136,7 +145,7 @@ const Body = () => {
         {filteredData.length > 0 ? (
           sortedData
             .slice(0, itemsToShow)
-            .map((product, index) =>  <ProductCard key={index} data={product} />)
+            .map((product, index) => <ProductCard key={index} data={product} />)
         ) : (
           <div className="text-center h-[40vh] flex justify-center items-center text-xl font-normal text-gray-400">
             No items found...
@@ -151,7 +160,7 @@ const Body = () => {
             className="border-2 border-green-600 hover:bg-green-600 hover:text-white text-green-600 font-semibold py-2 px-4 rounded"
             onClick={() => setShowMore(!showMore)}
           >
-            {showMore ? "Show Less" : "Show More"}
+            {showMore ? " Show Less" : "Show More"}
           </button>
         </div>
       )}

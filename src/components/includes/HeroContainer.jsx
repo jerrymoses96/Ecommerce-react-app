@@ -1,4 +1,9 @@
+import { useSearchContext } from "../context/SearchContext";
+
 const HeroContainer = () => {
+  const {searchQuery,setSearchQuery} = useSearchContext();
+  
+
   return (
     <div
       className="bg-cover bg-center bg-no-repeat"
@@ -16,9 +21,16 @@ const HeroContainer = () => {
           Discover the best local rental properties that fit your every travel
           need
         </p>
+        <div className="p-4 bg-white rounded-lg mt-8 flex items-center gap-2 shadow-lg ">
+          <input
+            className="w-full border rounded-md border-[#D9D9D9] text-center py-2"
+            type="search"
+            placeholder="Search"
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button className="bg-[#00C29F] text-white px-5 py-2 rounded-lg">Search</button>
+        </div>
       </div>
-      
-      
     </div>
   );
 };

@@ -12,13 +12,15 @@ const AppRoute = () => {
     <>
       <Router>
         <Routes>
+        
+        
           <Route path="/" element={<Home />} />
           <Route path="/viewaccomodation" element={<ViewAccomodation />} />
 
           <Route
             path="/viewaccomodation/:id"
             element={
-              
+
               <AuthRoute>
                 <ViewAccomodation />
               </AuthRoute>

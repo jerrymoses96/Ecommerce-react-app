@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AppRoute from "./components/routing/AppRoute";
+import { SearchProvider } from "./components/context/SearchContext";
 
 export const Pathcontext = React.createContext();
 export const userContext = React.createContext();
@@ -29,9 +30,11 @@ function App() {
   return (
     <Pathcontext.Provider value={{ setPathname }}>
       <userContext.Provider value={{ userdata, updateUserData }}>
-        <div>
-          <AppRoute />
-        </div>
+        <SearchProvider>
+          <div>
+            <AppRoute />
+          </div>
+        </SearchProvider>
       </userContext.Provider>
     </Pathcontext.Provider>
   );

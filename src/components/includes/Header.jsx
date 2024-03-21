@@ -1,7 +1,23 @@
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "../../App.css";
+import Dropdown from "../screens/Dropdown";
 
 const Header = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    setShowDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Check if the mouse is still over the dropdown before hiding it
+    if (!dropdownRef.current.contains(event.relatedTarget)) {
+      setShowDropdown(false);
+    }
+  };
+
   return (
     <div
       className="py-5 bg-[#F5F5F5] sticky top-0 z-10"
@@ -14,7 +30,7 @@ const Header = () => {
         <div>
           <Link to={"/"}>
             <h1>
-              <img src="/src\assets\images\logo.png" alt="logo" />
+              <img src="/src/assets/images/logo.png" alt="logo" />
             </h1>
           </Link>
         </div>
@@ -31,12 +47,26 @@ const Header = () => {
           <div className="flex gap-5 items-center">
             <div>
               <img
-                src="/src\assets\images\notifications.png"
+                src="/src/assets/images/notifications.png"
                 alt="notifications"
               />
             </div>
-            <div>
-              <img src="/src\assets\images\avatar.png" alt="avatar" />
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              ref={dropdownRef}
+            >
+              <img
+                src="/src/assets/images/avatar.png"
+                alt="avatar"
+                className="cursor-pointer"
+              />
+              {showDropdown && (
+                <div className="absolute top-14 right-16 bg-white p-2 shadow-md cursor-pointer rounded-md">
+                  {/* Here you can place your login component */}
+                  <Dropdown />
+                </div>
+              )}
             </div>
           </div>
         </div>

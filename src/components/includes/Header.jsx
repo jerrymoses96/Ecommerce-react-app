@@ -20,7 +20,9 @@ const Header = () => {
         </div>
         <div>
           <ul className="flex gap-5 items-center font-normal ">
-            <li>Home</li>
+            <Link to={"/"}>
+              <li>Home</li>
+            </Link>
             <li>Stays</li>
             <li>Become a host</li>
           </ul>

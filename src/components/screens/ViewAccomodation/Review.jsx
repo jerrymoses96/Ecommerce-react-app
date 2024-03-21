@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdStar } from "react-icons/io";
+import Button from "../../general/button/Button";
 
 const Review = ({ data }) => {
   const image_url = [
@@ -15,7 +16,7 @@ const Review = ({ data }) => {
     <div className="my-10">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold mb-5">Review</h2>
-        <button className="text-[#00C29F] font-semibold hover:text-green-700" onClick={() => console.log("View all clicked")}>view all</button>
+        <Button label={"View All"}/>
       </div>
       <div className="flex gap-5">
         {sortedData.map((review, index) => (

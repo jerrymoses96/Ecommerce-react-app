@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CiHeart } from "react-icons/ci";
 import { IoMdStar } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -9,20 +9,29 @@ const ProductCard = ({ data }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const navigate = useNavigate();
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-    toast.success(isFavorite ? "Removed from favorites" : "Added to favorites");
-  };
+  // Load favorite status from localStorage on component mount
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || {};
+    setIsFavorite(storedFavorites[data.id] || false);
+  }, [data.id]);
 
+  const toggleFavorite = (event) => {
+    event.stopPropagation();
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || {};
+    const updatedFavorites = { ...storedFavorites, [data.id]: !isFavorite };
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    setIsFavorite(!isFavorite);
+    toast.success(
+      !isFavorite ? "Added to favorites" : "Removed from favorites"
+    );
+  };
 
   const viewProduct = (id) => {
     navigate(`/viewaccomodation/${id}`);
-  }
+  };
 
   return (
-
     <>
-    
       <div
         className="rounded-xl shadow-md w-[23.5%] relative mb-7"
         key={data.name}
@@ -66,7 +75,7 @@ const ProductCard = ({ data }) => {
           className={`bg-[#F5F5F5] absolute top-4 right-4 rounded-full w-7 h-7 flex justify-center items-center ${
             isFavorite ? "bg-red-400" : "text-gray-500 hover:bg-red-400"
           }`}
-          onClick={toggleFavorite}
+          onClick={(event) => toggleFavorite(event)}
         >
           <CiHeart />
         </div>

@@ -14,3 +14,34 @@ img.active {
   cursor: pointer;
 }
 
+/* PriceSlider.css */
+
+.slider {
+  -webkit-appearance: none; /* Remove default styles */
+  width: 100%; /* Full-width */
+  height: 1px; /* Specified height */
+  background: #d3d3d3; /* Gray background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set opacity */
+  -webkit-transition: .2s; /* 0.2 second transition on hover */
+  transition: opacity .2s; /* 0.2 second transition on hover */
+}
+
+/* Styling for the slider handle */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styles */
+  appearance: none; /* Remove default styles */
+  width: 10px; /* Set width */
+  height: 10px; /* Set height */
+  border-radius: 50%; /* Make it round */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 10px; /* Set width */
+  height: 10px; /* Set height */
+  border-radius: 50%; /* Make it round */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}

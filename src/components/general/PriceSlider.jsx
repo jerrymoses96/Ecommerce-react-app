@@ -1,9 +1,11 @@
+import React from 'react';
+import "../../App.css";
 
 const PriceSlider = ({ priceRange, setPriceRange }) => {
   return (
-    <div >
-      <label htmlFor="price-slider" className="flex text-gray-700 text-sm font-extralight ">
-        Price Range: <p className="font-bold"> ${priceRange[0]} - ${priceRange[1]}</p>
+    <div>
+      <label htmlFor="price-slider" className="flex text-gray-700 text-sm font-extralight justify-center ">
+        <p className="font-bold">${priceRange[0]} - ${priceRange[1]}</p>
       </label>
       <input
         type="range"
@@ -13,7 +15,7 @@ const PriceSlider = ({ priceRange, setPriceRange }) => {
         onChange={(e) =>
           setPriceRange([priceRange[0], parseInt(e.target.value)])
         }
-        className="slider h-1"
+        className="slider "
         id="price-slider"
       />
     </div>

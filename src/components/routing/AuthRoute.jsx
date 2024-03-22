@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Pathcontext } from "../../App";
+import { usePathContext } from "../context/PathContext";
 
 const AuthRoute = ({ children }) => {
   const userData = JSON.parse(localStorage.getItem("user_data"));
   const location = useLocation();
-  const { setPathname } = useContext(Pathcontext);
+  const { setPathname } = usePathContext();
   const [componentMounted, setComponentMounted] = useState(false);
 
   useEffect(() => {

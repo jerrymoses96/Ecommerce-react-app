@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { userContext } from "../../App";
+import React from "react";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 const Dropdown = () => {
-  const { userdata, updateUserData } = useContext(userContext);
+  const { userdata, updateUserData } = useUserContext();
 
   const HandleLogout = () => {
     updateUserData({ type: "LOGOUT" });

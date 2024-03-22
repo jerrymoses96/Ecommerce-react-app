@@ -1,15 +1,15 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useRef, useState } from "react";
+import { FaRegUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../App.css";
+import { useUserContext } from "../context/UserContext";
 import Dropdown from "../screens/Dropdown";
-import { FaRegUserCircle } from "react-icons/fa";
-import { userContext } from "../../App";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
-  const { userdata } = useContext(userContext);
+  const { userdata } = useUserContext();
 
   const handleMouseEnter = () => {
     setShowDropdown(true);
@@ -48,7 +48,7 @@ const Header = () => {
           </ul>
         </div>
         <div>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5 items-center relative">
             <div>
               <img
                 src="/src/assets/images/notifications.png"
@@ -71,13 +71,12 @@ const Header = () => {
               )}
 
               {showDropdown && (
-                <div className="absolute top-14 right-16 bg-white p-2 shadow-md cursor-pointer rounded-md">
+                <div className="absolute top-9 right-0 bg-white p-2 shadow-md cursor-pointer rounded-md">
                   {/* Here you can place your login component */}
                   <Dropdown />
                 </div>
               )}
             </div>
-            
           </div>
         </div>
       </div>

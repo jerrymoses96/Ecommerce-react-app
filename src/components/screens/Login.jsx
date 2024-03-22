@@ -1,18 +1,33 @@
-import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../general/Constants";
-import { useContext, useState } from "react";
-import { userContext } from "../../App";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Header from "../includes/Header";
+import { usePathContext } from "../context/PathContext";
+import { useUserContext } from "../context/UserContext";
+import { BASE_URL } from "../general/Constants";
 import Footer from "../includes/Footer";
+import Header from "../includes/Header";
 
 export default function Login() {
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
   const [message, setmessage] = useState("");
-  const { updateUserData } = useContext(userContext);
+  const { updateUserData } = useUserContext();
   const navigate = useNavigate();
+
+  const { pathname, setPathname } = usePathContext();
+
+  const handleLoginSuccess = () => {
+    // Clear stored path in context
+    setPathname(null);
+    // Redirect to stored path if it exists
+    if (pathname) {
+      navigate(pathname);
+    } else {
+      navigate("/");
+    }
+  };
+
   const HandleSubmit = (e) => {
     setmessage("");
     e.preventDefault();
@@ -35,6 +50,7 @@ export default function Login() {
           progress: undefined,
           theme: "dark",
         });
+        handleLoginSuccess();
       })
       .catch((error) => {
         console.log(error.response.status);
@@ -46,20 +62,9 @@ export default function Login() {
   return (
     <div>
       <Header />
-      <div className="min-h-screen flex p-4 mb-20 items-center ">
-        {/* Left Container */}
-        <div className="w-1/2 p-8">
-          <div className="">
-            <img
-              src="https://media.fashionnetwork.com/cdn-cgi/image/fit=contain,width=1000,height=1000/m/e176/15cf/837e/65d2/2069/a406/a4fd/43a2/a404/a506/a506.jpg"
-              alt="Image"
-              className="rounded-2xl shadow-2xl   "
-            />
-          </div>
-        </div>
-
+      <div className="min-h-screen flex justify-center items-center wrapper">
         {/* Right Container */}
-        <div className="bg-gray-300 w-1/2 flex flex-col items-end justify-end rounded-lg p-8">
+        <div className="bg-gray-300 w-1/2 flex flex-col items-end justify-end rounded-lg p-8 ">
           <div className="w-full">
             <h3 className="text-2xl font-bold mb-4">Login to your Account</h3>
             <p className="text-lg mb-6">Enter email and password to login</p>

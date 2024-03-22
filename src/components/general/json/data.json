@@ -42,7 +42,7 @@
   },
   {
     "id": 2,
-    "name": "Urban Loft",
+    "name": "Urban Cottages",
     "location": "Georgina Bay, Ontario, Canada",
     "price": 512,
     "average_rating": 3.8,
@@ -202,7 +202,7 @@
   },
   {
     "id": 6,
-    "name": "Tranquil Retreat",
+    "name": "Tranquil Cabin",
     "location": "Haliburton, Ontario, Canada",
     "price": 380,
     "average_rating": 4.2,
@@ -362,7 +362,7 @@
   },
   {
     "id": 10,
-    "name": "Seaside Cottage",
+    "name": "Seaside Cottages",
     "location": "Nova Scotia, Canada",
     "price": 480,
     "average_rating": 4.3,
@@ -374,7 +374,7 @@
       "src/assets/images/slider-3.jpg",
       "src/assets/images/slider-4.jpg"
     ],
-    "categories": "Cottage",
+    "categories": "Cottages",
     "reviews": [
       {
         "name": "Emma",
@@ -402,7 +402,7 @@
   },
   {
     "id": 11,
-    "name": "Forest Retreat",
+    "name": "Forest Cabin",
     "location": "Gatineau Park, Quebec, Canada",
     "price": 420,
     "average_rating": 4.6,
@@ -482,7 +482,7 @@
   },
   {
     "id": 13,
-    "name": "Lakefront Retreat",
+    "name": "Lakefront Cottages",
     "location": "Muskoka, Ontario, Canada",
     "price": 750,
     "average_rating": 4.8,
@@ -494,7 +494,7 @@
       "src/assets/images/slider-3.jpg",
       "src/assets/images/slider-4.jpg"
     ],
-    "categories": "Cottage",
+    "categories": "Cottages",
     "reviews": [
       {
         "name": "Emma",
@@ -522,7 +522,7 @@
   },
   {
     "id": 14,
-    "name": "Cozy Mountain Cabin",
+    "name": "Cozy Mountain Retreat",
     "location": "Banff, Alberta, Canada",
     "price": 550,
     "average_rating": 4.5,
@@ -534,7 +534,7 @@
       "src/assets/images/slider-3.jpg",
       "src/assets/images/slider-4.jpg"
     ],
-    "categories": "Cabin",
+    "categories": "Retreat",
     "reviews": [
       {
         "name": "Sophie",
@@ -602,7 +602,7 @@
   },
   {
     "id": 16,
-    "name": "Hamilton Riverside Cabin",
+    "name": "Hamilton Riverside Chalet",
     "location": "Hamilton, Ontario, Canada",
     "price": 123,
     "average_rating": 3.9,
@@ -614,7 +614,7 @@
       "src/assets/images/slider-3.jpg",
       "src/assets/images/slider-4.jpg"
     ],
-    "categories": "Cabin",
+    "categories": "Chalet",
     "reviews": [
       {
         "name": "Charlotte",
@@ -682,7 +682,7 @@
   },
   {
     "id": 18,
-    "name": "Kingston Seaside Cottage",
+    "name": "Kingston Seaside Cottages",
     "location": "Kingston, Ontario, Canada",
     "price": 312,
     "average_rating": 4.6,
@@ -694,7 +694,7 @@
       "src/assets/images/slider-3.jpg",
       "src/assets/images/slider-4.jpg"
     ],
-    "categories": "Cottage",
+    "categories": "Cottages",
     "reviews": [
       {
         "name": "Sophie",

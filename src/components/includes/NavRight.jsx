@@ -1,34 +1,27 @@
+import React from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import Dropdown from "../screens/Dropdown";
 
-export default function NavRight(props) {
+export default function NavRight({ userdata }) {
   return (
-    <div>
-      <div className="flex gap-5 items-center relative">
+    <div className="group relative">
+      <div className="flex gap-5 items-center">
         <div>
           <img src="/src/assets/images/notifications.png" alt="notifications" />
         </div>
-        <div
-          onMouseEnter={props.handleMouseEnter}
-          onMouseLeave={props.handleMouseLeave}
-          ref={props.dropdownRef}
-        >
-          {props.userdata ? (
+        <div className="group relative">
+          {userdata ? (
             <img
               src="/src/assets/images/avatar.png"
               alt="avatar"
-              className="cursor-pointer"
+              className="cursor-pointer group-hover:block"
             />
           ) : (
-            <FaRegUserCircle size={24} />
+            <FaRegUserCircle size={24} className="group-hover:block" />
           )}
-
-          {props.showDropdown && (
-            <div className="absolute top-7 right-0 bg-white p-2 shadow-md cursor-pointer rounded-md">
-              {/* Here you can place your login component */}
-              <Dropdown />
-            </div>
-          )}
+          <div className="hidden group-hover:block absolute top-full right-0 bg-white p-2 shadow-md cursor-pointer rounded-md">
+            <Dropdown />
+          </div>
         </div>
       </div>
     </div>

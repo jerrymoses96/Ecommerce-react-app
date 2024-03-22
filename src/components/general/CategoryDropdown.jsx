@@ -12,11 +12,11 @@ const CategoryDropdown = ({ onChange }) => {
   const options = [
     { value: "Lodge", label: "Lodge" },
     { value: "Cottages", label: "Cottages" },
-    { value: "Estate", label: "Estate" },
-    { value: "Hills", label: "Hills" },
-    { value: "Home", label: "Home" },
+    { value: "Villa", label: "Villa" },
+    { value: "Chalet", label: "Chalet" },
+    { value: "Retreat", label: "Retreat" },
     { value: "Cabin", label: "Cabin" },
-    { value: "Lakes", label: "Lakes" },
+  
   ];
 
   const handleChange = (value) => {

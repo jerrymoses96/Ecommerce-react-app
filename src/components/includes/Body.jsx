@@ -67,8 +67,10 @@ const Body = () => {
         price >= priceRange[0] &&
         price <= priceRange[1] &&
         (selectedCategories.length === 0 ||
-          selectedCategories.includes(product.categories)) &&
-        product.name.toLowerCase().includes(searchQuery.toLowerCase()) // Add search query filter here
+          selectedCategories.some((category) =>
+            product.categories.includes(category)
+          )) &&
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     });
     setFilteredData(filtered);

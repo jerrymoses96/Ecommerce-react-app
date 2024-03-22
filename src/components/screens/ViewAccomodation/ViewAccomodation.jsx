@@ -14,6 +14,7 @@ import Review from "./Review";
 import SimilarStays from "./SimilarStays";
 import Footer from "../../includes/Footer";
 import Header from "../../includes/Header";
+import { Helmet } from "react-helmet";
 
 const ViewAccommodation = () => {
   // Extracting ID parameter from URL
@@ -26,7 +27,12 @@ const ViewAccommodation = () => {
   );
 
   return (
+    
     <div className="w-full">
+      <Helmet>
+        <title>{filteredAccommodation.name}</title>
+      </Helmet>
+      
       <Header/>
       {filteredAccommodation ? (
         <div>

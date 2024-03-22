@@ -5,6 +5,7 @@ import { useUserContext } from "../context/UserContext";
 import { BASE_URL } from "../general/Constants";
 import Footer from "../includes/Footer";
 import Header from "../includes/Header";
+import { Helmet } from "react-helmet";
 
 export default function Signup() {
   const [name, setname] = useState("");
@@ -42,6 +43,9 @@ export default function Signup() {
 
   return (
     <div>
+      <Helmet>
+        <title>Sign Up</title>
+      </Helmet>
       <Header />
       <div className="min-h-screen flex wrapper justify-center items-center">
         <div className="bg-gray-300 w-2/5 flex items-end justify-center rounded-xl p-12">

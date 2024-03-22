@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { CiHeart } from "react-icons/ci";
 import { IoMdStar } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -32,6 +33,7 @@ const ProductCard = ({ data }) => {
 
   return (
     <>
+    
       <div
         className="rounded-xl shadow-md w-[23.5%] relative mb-7"
         key={data.name}

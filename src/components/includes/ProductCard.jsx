@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { IoMdStar } from "react-icons/io";
 import { useNavigate } from "react-router-dom";

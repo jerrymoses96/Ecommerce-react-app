@@ -7,6 +7,7 @@ import { useUserContext } from "../context/UserContext";
 import { BASE_URL } from "../general/Constants";
 import Footer from "../includes/Footer";
 import Header from "../includes/Header";
+import FooterNote from "../includes/FooterNote";
 
 export default function Login() {
   const [username, setusername] = useState("");
@@ -102,6 +103,7 @@ export default function Login() {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

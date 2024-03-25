@@ -35,17 +35,19 @@ const SimilarStays = ({ category }) => {
         <h2 className="text-2xl font-semibold mb-5">Similar Stays</h2>
         {showAll ? (
           <Button onClick={handleViewLess} label="View Less" />
-        ) : similarStays.length > 3 && (
-          <Button onClick={handleViewAll} label="View All" />
+        ) : (
+          similarStays.length > 3 && (
+            <Button onClick={handleViewAll} label="View All" />
+          )
         )}
       </div>
-      <div className="flex justify-between flex-wrap">
+      <div className="similar-container flex flex-col justify-between  lg:flex-row">
         {similarStays
           .slice(0, showAll ? similarStays.length : 3)
           .map((stay) => (
             <div
               key={stay.id}
-              className="flex rounded-xl shadow-md border border-[#E8ECF2] w-[31%] mb-5"
+              className="flex rounded-xl shadow-md border border-[#E8ECF2] w-[100%] lg:w-[31%]  mb-5"
             >
               <div className="relative">
                 <img
@@ -64,7 +66,7 @@ const SimilarStays = ({ category }) => {
                   <CiHeart size={15} />
                 </div>
               </div>
-              <div className="p-5">
+              <div className="p-5 flex flex-col justify-center ">
                 <h3 className="font-semibold">{stay.name}</h3>
                 <p className="text-sm text-[#787878]">{stay.location}</p>
                 <p className="flex items-center mt-2">

@@ -27,34 +27,39 @@ const ViewAccommodation = () => {
   );
 
   return (
-    
     <div className="w-full">
       <Helmet>
         <title>{filteredAccommodation.name}</title>
       </Helmet>
-      
-      <Header/>
+
+      <Header />
       {filteredAccommodation ? (
         <div>
           {/* Accommodation Details Section */}
-          <div className="flex wrapper gap-5 pb-5 border-b border-green-200">
+          <div className=" wrapper gap-5 pb-5 border-b border-green-200">
             {/* Image Slider and About Section */}
-            <div className="w-[60%]">
-              <ImageSlider images={filteredAccommodation.image_url} />
-              <About data={filteredAccommodation} />
+            <div className="w-[100%] flex flex-col lg:flex-row gap-5">
+              <div className="w-[100%] lg:w-[60%]">
+                <ImageSlider images={filteredAccommodation.image_url} />
+              </div>
+              <div className=" mt-0 lg:mt-10 w-[100%] lg:w-[40%]   px-5 py-10 border h-fit border-green-300 rounded-lg">
+                <Details data={filteredAccommodation} />
+              </div>
             </div>
 
             {/* Details and Features Section */}
-            <div className="w-[40%]">
-              <div className="mt-10 mb-44 p-5 w-full border h-fit border-green-300 rounded-lg">
-                <Details data={filteredAccommodation} />
+            <div className="flex-col mt-10 lg:mt-0 lg:flex lg:flex-row">
+              <div className="w-full lg:w-[60%]">
+                <About data={filteredAccommodation} />
               </div>
-              <Features />
+              <div className="w-full lg:w-[40%]">
+                <Features />
+              </div>
             </div>
           </div>
 
           {/* Amenities and Map Section */}
-          <div className="wrapper py-5 flex">
+          <div className="wrapper py-5 flex-row lg:flex">
             <Amenities />
             <Map location={filteredAccommodation.location} />
           </div>
@@ -66,9 +71,8 @@ const ViewAccommodation = () => {
           <div className="wrapper pb-16">
             <SimilarStays category={filteredAccommodation.categories} />
           </div>
-          <Footer/>
+          <Footer />
         </div>
-        
       ) : (
         // Displayed if no accommodation found with ID
         <div>No accommodation found with ID: {id}</div>

@@ -69,7 +69,7 @@ export default function Login() {
       <Header />
       <div className="min-h-screen flex justify-center items-center wrapper">
         {/* Right Container */}
-        <div className="bg-gray-300 w-1/2 flex flex-col items-end justify-end rounded-lg p-8 ">
+        <div className="bg-gray-300 w-[90%] sm:w-[75%] md:w-[55%] flex flex-col items-end justify-end rounded-lg p-8 ">
           <div className="w-full">
             <h3 className="text-2xl font-bold mb-4">Login to your Account</h3>
             <p className="text-lg mb-6">Enter email and password to login</p>

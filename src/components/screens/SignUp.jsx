@@ -47,8 +47,8 @@ export default function Signup() {
         <title>Sign Up</title>
       </Helmet>
       <Header />
-      <div className="min-h-screen flex wrapper justify-center items-center">
-        <div className="bg-gray-300 w-2/5 flex items-end justify-center rounded-xl p-12">
+      <div className="min-h-screen flex wrapper justify-center items-center my-10">
+        <div className="bg-gray-300 w-[90%] sm:w-[75%] md:w-[55%] flex items-end justify-center rounded-xl p-12">
           <div className="pb-12 w-full">
             <h3 className="text-2xl font-bold mb-6">Register into Account</h3>
             <p className="text-lg mb-8">

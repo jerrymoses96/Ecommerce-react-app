@@ -24,7 +24,7 @@ const Details = ({ data }) => {
           /night
         </p>
         <img
-          className="w-[30%]"
+          className="w-[28%] sm:w-[26%] md:w-[25%] lg:w-[30%] "
           src="/src/assets/images/Frame 105.png"
           alt="image"
         />
@@ -32,9 +32,9 @@ const Details = ({ data }) => {
       <button className="bg-[#00C29F] w-full py-3 text-white font-semibold rounded-md shadow-md my-4">
         Book this home
       </button>
-      <div>
-        <p className="text-[#787878]">Hosted by :</p>
-        <div className="flex justify-between items-center mt-3 border-t border-t-green-100 pt-2">
+      <div className="mt-8">
+        <p className="text-[#787878] mb-2">Hosted by :</p>
+        <div className="flex justify-between items-center  border-t border-t-green-100 pt-2">
           <div className="flex items-center gap-2">
             <img src="/src/assets/images/Ellipse 2.png" alt="image" />
             <div>
@@ -43,7 +43,7 @@ const Details = ({ data }) => {
             </div>
           </div>
           <img
-            className="w-[20%]"
+            className=" w-[18%] sm:w-[18%] md:w-[18%] lg:w-[25%]"
             src="/src/assets/images/Frame 23.png"
             alt="logo"
           />

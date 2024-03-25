@@ -1,8 +1,7 @@
 import { useSearchContext } from "../context/SearchContext";
 
 const HeroContainer = () => {
-  const {searchQuery,setSearchQuery} = useSearchContext();
-  
+  const { searchQuery, setSearchQuery } = useSearchContext();
 
   return (
     <div
@@ -13,22 +12,27 @@ const HeroContainer = () => {
       }}
     >
       <div className="wrapper py-16">
-        <h2 className="text-4xl font-semibold mb-1  ">
-          Find a <small className="text-green-600 text-4xl">host</small> for
-          every journey
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
+          Find a{" "}
+          <small className="text-green-600 text-4xl md:text-5xl lg:text-6xl">
+            host
+          </small>{" "}
+          for every journey
         </h2>
-        <p className="text-xl font-light">
+        <p className="text-lg md:text-xl lg:text-2xl font-light">
           Discover the best local rental properties that fit your every travel
           need
         </p>
-        <div className="p-4 bg-white rounded-lg mt-8 flex items-center gap-2 shadow-lg ">
+        <div className="p-4 bg-white rounded-lg mt-8 flex gap-2 shadow-lg">
           <input
-            className="w-full border rounded-md border-[#D9D9D9] text-center py-2"
+            className="flex-1 border rounded-md border-[#D9D9D9] text-center py-2"
             type="search"
             placeholder="Search"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="bg-[#00C29F] text-white px-5 py-2 rounded-lg">Search</button>
+          <button className="bg-[#00C29F] text-white py-2 px-5 rounded-lg">
+            Search
+          </button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import PriceSlider from "../general/PriceSlider";
 import RatingFilterDropdown from "../general/RatingFilterDropdown";
 import data from "../general/json/data.json";
 import ProductCard from "./ProductCard";
+import "../../App.css";
 
 const Body = () => {
   // State variables
@@ -86,17 +87,22 @@ const Body = () => {
   return (
     <div className="my-10">
       {/* Filter section */}
-      <div className="wrapper flex justify-between py-3 px-3 rounded-lg border border-green-200">
-        <div className="flex gap-5">
+      <div className="filter-section wrapper py-3 px-3 rounded-lg border border-green-200 flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col md:flex-row md:gap-5">
           {/* Rating filter */}
-          <RatingFilterDropdown onChange={setSelectedRatings} />
+          <div className="filter-item">
+            <RatingFilterDropdown onChange={setSelectedRatings} />
+          </div>
 
           {/* Category filter */}
-          <CategoryDropdown onChange={setSelectedCategories} />
+          <div className="filter-item">
+            <CategoryDropdown onChange={setSelectedCategories} />
+          </div>
 
           {/* Price slider */}
-          <div className="border border-[#D1D5DB] rounded-lg px-5  flex flex-col items-center justify-center">
+          <div className=" filter-item border border-[#D1D5DB] rounded-lg px-5 flex flex-col md:flex-row items-center">
             <PriceSlider
+              id="price"
               priceRange={priceRange}
               setPriceRange={setPriceRange}
             />
@@ -104,23 +110,24 @@ const Body = () => {
         </div>
 
         {/* Sort dropdown */}
-        <div>
-          <label htmlFor="sort" className="text-gray-700 mb-2 mr-2 font-light">
-            Sort by:
-          </label>
-          <select
-            id="sort"
-            name="Sort"
-            value={selectedSort}
-            onChange={handleSortChange}
-            className="bg-gray-50 border font-thin border-gray-300 text-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:ring-width-1 pl-3 pr-10 py-2"
-          >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+        <div className="filter-item  md:mt-0 ">
+          <div className="flex items-center md:w-full">
+
+            {/* Conditionally render based on screen size */}
+            <select
+              id="sort"
+              name="Sort"
+              value={selectedSort}
+              onChange={handleSortChange}
+              className="w-full bg-gray-50 border font-thin border-gray-300 text-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:ring-width-1 pl-3 pr-10 py-2"
+            >
+              {sortOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </div>
 
@@ -129,7 +136,6 @@ const Body = () => {
         <p className="text-xl">
           Stays nearby: <span className="font-semibold">All</span>
         </p>
-
         <ImageToggle
           image1Src="src\assets\images\Frame 25.png"
           image2Src="src\assets\images\Frame 24.png"

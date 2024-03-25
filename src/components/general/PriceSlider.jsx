@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 import "../../App.css";
 
 const PriceSlider = ({ priceRange, setPriceRange }) => {
   return (
-    <div>
-      <label htmlFor="price-slider" className="flex text-gray-700 text-sm font-extralight justify-center ">
-        <p className="font-bold">${priceRange[0]} - ${priceRange[1]}</p>
+    <div className="price-slider">
+      <label
+        htmlFor="price-slider"
+        className="flex text-gray-700 text-sm font-extralight justify-center "
+      >
+        <p className="font-bold">
+          ${priceRange[0]} - ${priceRange[1]}
+        </p>
       </label>
       <input
         type="range"

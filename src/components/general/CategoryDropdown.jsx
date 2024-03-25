@@ -55,7 +55,7 @@ const CategoryDropdown = ({ onChange }) => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="origin-top-left absolute left-0 z-50 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-left absolute left-0 z-50 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <div
             className="py-1"
             role="menu"

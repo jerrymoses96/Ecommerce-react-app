@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ImageSlider = ({ images }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -17,14 +17,15 @@ const ImageSlider = ({ images }) => {
           alt={`image ${selectedImageIndex}`}
         />
       </div>
-      <div className="thumbnail-container flex justify-between mt-4 overflow-x-auto">
+      <div
+        className="thumbnail-container flex justify-between gap-2 mt-4 overflow-x-auto overflow-y-hidden rounded-lg"
+        style={{ scrollbarWidth: "none", "-ms-overflow-style": "none" }}
+      >
         {/* Mapping over the images array to display all thumbnail images */}
         {images?.map((imageUrl, index) => (
           <img
             key={index}
-            className={`thumbnail-image w-[125px] h-auto cursor-pointer rounded-lg shadow-xl  ${
-              index === selectedImageIndex ? 'opacity-100' : 'opacity-50 hover:opacity-100'
-            }`}
+            className={"thumbnail-image w-[200px] h-[100px] cursor-pointer  shadow-xl"}
             src={`/${imageUrl}`}
             alt={`image ${index}`}
             // Handling click on thumbnail image

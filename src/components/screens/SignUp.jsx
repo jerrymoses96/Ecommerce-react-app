@@ -48,7 +48,7 @@ export default function Signup() {
       </Helmet>
       <Header />
       <div className="wrapper my-10 flex min-h-screen items-center justify-center">
-        <div className="flex w-[90%] items-end justify-center rounded-xl bg-gray-300 p-12 sm:w-[75%] md:w-[55%]">
+        <div className="flex w-[100%] items-end justify-center rounded-xl bg-gray-300 p-12 sm:w-[75%] md:w-[55%]">
           <div className="w-full pb-12">
             <h3 className="mb-6 text-2xl font-bold">Register into Account</h3>
             <p className="mb-8 text-lg">

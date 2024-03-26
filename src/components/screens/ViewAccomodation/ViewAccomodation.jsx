@@ -59,7 +59,7 @@ const ViewAccommodation = () => {
           </div>
 
           {/* Amenities and Map Section */}
-          <div className="wrapper justify-between flex-row py-5 lg:flex">
+          <div className="wrapper justify-between flex flex-col py-5 lg:flex-row">
             <Amenities />
             <Map location={filteredAccommodation.location} />
           </div>

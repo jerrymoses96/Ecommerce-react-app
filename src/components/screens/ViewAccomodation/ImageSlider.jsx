@@ -9,7 +9,7 @@ const ImageSlider = ({ images }) => {
 
   return (
     <div className="image-slider-container w-full my-10 rounded-lg overflow-hidden shadow-md">
-      <div className="main-image-container h-96 relative">
+      <div className="main-image-container h-72 sm:h-96 relative">
         {/* Displaying the selected image at the top */}
         <img
           className="main-image object-cover w-full h-full rounded-lg"

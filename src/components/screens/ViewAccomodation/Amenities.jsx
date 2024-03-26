@@ -11,7 +11,7 @@ const Amenities = () => {
           alt="image"
         />
       </div> */}
-      <div className="my-6 flex flex-col sm:flex-row gap-3 sm:gap-20 md:gap-24 text-sm font-medium text-[#171E1D]">
+      <div className="my-6 flex flex-col sm:flex-row gap-3 sm:gap-20 md:gap-22 mr-2 text-sm font-medium text-[#171E1D]">
         <ul className="flex flex-col gap-3">
           <li className="flex items-center gap-2">
             {" "}

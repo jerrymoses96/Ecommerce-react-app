@@ -69,7 +69,7 @@ export default function Login() {
       <Header />
       <div className="min-h-screen flex justify-center items-center wrapper">
         {/* Right Container */}
-        <div className="bg-gray-300 w-[90%] sm:w-[75%] md:w-[55%] flex flex-col items-end justify-end rounded-lg p-8 ">
+        <div className="bg-gray-300 w-[100%] sm:w-[75%] md:w-[55%] flex flex-col items-end justify-end rounded-lg p-8 ">
           <div className="w-full">
             <h3 className="text-2xl font-bold mb-4">Login to your Account</h3>
             <p className="text-lg mb-6">Enter email and password to login</p>
@@ -92,14 +92,14 @@ export default function Login() {
                   className="p-4 w-full border rounded"
                 />
               </div>
-              <Link to="/auth/create/" className="text-blue-600 text-lg mb-4">
+              <Link to="/auth/create/" className="text-blue-600 text-lg ">
                 Signup Now
               </Link>
               {message && (
                 <p className="text-center my-2 text-red-700">{message}</p>
               )}
               <div className="flex justify-center ">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded text-lg">
+                <button className="bg-blue-600 text-white px-8 py-4 mt-4 rounded text-lg">
                   Login
                 </button>
               </div>

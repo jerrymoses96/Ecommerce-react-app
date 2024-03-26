@@ -13,7 +13,7 @@ const Review = ({ data }) => {
   const sortedData = [...data].sort((a, b) => b.rating - a.rating);
 
   return (
-    <div className="my-10">
+    <div className="mb-10">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold mb-5">Review</h2>
         <Button label={"View All"} />

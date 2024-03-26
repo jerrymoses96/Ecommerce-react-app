@@ -12,25 +12,25 @@ const HeroContainer = () => {
       }}
     >
       <div className="wrapper py-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-1">
+        <h2 className="mb-1 text-4xl font-semibold md:text-5xl lg:text-6xl">
           Find a{" "}
-          <small className="text-green-600 text-4xl md:text-5xl lg:text-6xl">
+          <small className="text-4xl text-green-600 md:text-5xl lg:text-6xl">
             host
           </small>{" "}
           for every journey
         </h2>
-        <p className="text-lg md:text-xl lg:text-2xl font-light">
+        <p className="text-lg font-light md:text-xl lg:text-2xl">
           Discover the best local rental properties that fit your every travel
           need
         </p>
-        <div className="p-4 bg-white rounded-lg mt-8 flex gap-2 shadow-lg">
+        <div className="mt-8 flex gap-2 rounded-lg bg-white p-4 shadow-lg">
           <input
-            className="flex-1 border rounded-md border-[#D9D9D9] text-center py-2"
+            className="flex-1 rounded-md border border-[#D9D9D9] py-2 text-center"
             type="search"
             placeholder="Search"
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="bg-[#00C29F] text-white py-2 px-5 rounded-lg">
+          <button className="rounded-lg bg-[#00C29F] px-5 py-2 text-white">
             Search
           </button>
         </div>

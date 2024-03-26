@@ -67,12 +67,12 @@ export default function Login() {
         <title>Login</title>
       </Helmet>
       <Header />
-      <div className="min-h-screen flex justify-center items-center wrapper">
+      <div className="wrapper flex min-h-screen items-center justify-center">
         {/* Right Container */}
-        <div className="bg-gray-300 w-[100%] sm:w-[75%] md:w-[55%] flex flex-col items-end justify-end rounded-lg p-8 ">
+        <div className="flex w-[100%] flex-col items-end justify-end rounded-lg bg-gray-300 p-8 sm:w-[75%] md:w-[55%] ">
           <div className="w-full">
-            <h3 className="text-2xl font-bold mb-4">Login to your Account</h3>
-            <p className="text-lg mb-6">Enter email and password to login</p>
+            <h3 className="mb-4 text-2xl font-bold">Login to your Account</h3>
+            <p className="mb-6 text-lg">Enter email and password to login</p>
             <form className="w-full" onSubmit={HandleSubmit}>
               <div className="mb-4">
                 <input
@@ -80,7 +80,7 @@ export default function Login() {
                   value={username}
                   type="email"
                   placeholder="Email"
-                  className="p-4 w-full border rounded"
+                  className="w-full rounded border p-4"
                 />
               </div>
               <div className="mb-4">
@@ -89,17 +89,17 @@ export default function Login() {
                   value={password}
                   type="password"
                   placeholder="Password"
-                  className="p-4 w-full border rounded"
+                  className="w-full rounded border p-4"
                 />
               </div>
-              <Link to="/auth/create/" className="text-blue-600 text-lg ">
+              <Link to="/auth/create/" className="text-lg text-blue-600 ">
                 Signup Now
               </Link>
               {message && (
-                <p className="text-center my-2 text-red-700">{message}</p>
+                <p className="my-2 text-center text-red-700">{message}</p>
               )}
               <div className="flex justify-center ">
-                <button className="bg-blue-600 text-white px-8 py-4 mt-4 rounded text-lg">
+                <button className="mt-4 rounded bg-blue-600 px-8 py-4 text-lg text-white">
                   Login
                 </button>
               </div>

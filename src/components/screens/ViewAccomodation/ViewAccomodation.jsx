@@ -1,20 +1,19 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import "../../../App.css";
 import data from "../../general/json/data.json";
 
 // Importing Components
+import { Helmet } from "react-helmet";
+import Footer from "../../includes/Footer";
+import Header from "../../includes/Header";
 import About from "./About";
-import Details from "./Details";
-import ImageSlider from "./ImageSlider";
-import Features from "./Features";
 import Amenities from "./Amenities";
+import Details from "./Details";
+import Features from "./Features";
+import ImageSlider from "./ImageSlider";
 import Map from "./Map";
 import Review from "./Review";
 import SimilarStays from "./SimilarStays";
-import Footer from "../../includes/Footer";
-import Header from "../../includes/Header";
-import { Helmet } from "react-helmet";
 
 const ViewAccommodation = () => {
   // Extracting ID parameter from URL
@@ -59,7 +58,7 @@ const ViewAccommodation = () => {
           </div>
 
           {/* Amenities and Map Section */}
-          <div className="wrapper justify-between flex flex-col py-5 lg:flex-row">
+          <div className="wrapper flex flex-col justify-between py-5 lg:flex-row">
             <Amenities />
             <Map location={filteredAccommodation.location} />
           </div>

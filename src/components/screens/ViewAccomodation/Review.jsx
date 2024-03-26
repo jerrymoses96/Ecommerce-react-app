@@ -15,17 +15,17 @@ const Review = ({ data }) => {
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-semibold mb-5">Review</h2>
+        <h2 className="mb-5 text-2xl font-semibold">Review</h2>
         <Button label={"View All"} />
       </div>
-      <div className="gap-5 flex flex-col lg:flex-">
+      <div className="lg:flex- flex flex-col gap-5">
         {sortedData.map((review, index) => (
           <div
             key={review.id}
-            className="border border-[#E8ECF2] p-5 rounded-xl mb-4 lg:mb-0"
+            className="mb-4 rounded-xl border border-[#E8ECF2] p-5 lg:mb-0"
           >
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3 mb-3">
+              <div className="mb-3 flex items-center gap-3">
                 <img src={image_url[index]} alt="profile" />
                 <div>
                   <p className="font-semibold">{review.name}</p>

@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import { BASE_URL } from "../general/Constants";
 import Footer from "../includes/Footer";
 import Header from "../includes/Header";
-import { Helmet } from "react-helmet";
 
 export default function Signup() {
   const [name, setname] = useState("");
@@ -47,11 +47,11 @@ export default function Signup() {
         <title>Sign Up</title>
       </Helmet>
       <Header />
-      <div className="min-h-screen flex wrapper justify-center items-center my-10">
-        <div className="bg-gray-300 w-[90%] sm:w-[75%] md:w-[55%] flex items-end justify-center rounded-xl p-12">
-          <div className="pb-12 w-full">
-            <h3 className="text-2xl font-bold mb-6">Register into Account</h3>
-            <p className="text-lg mb-8">
+      <div className="wrapper my-10 flex min-h-screen items-center justify-center">
+        <div className="flex w-[90%] items-end justify-center rounded-xl bg-gray-300 p-12 sm:w-[75%] md:w-[55%]">
+          <div className="w-full pb-12">
+            <h3 className="mb-6 text-2xl font-bold">Register into Account</h3>
+            <p className="mb-8 text-lg">
               Create an account to access all the features
             </p>
             <form className="w-full" onSubmit={HandleSubmit}>
@@ -61,7 +61,7 @@ export default function Signup() {
                   value={name}
                   type="text"
                   placeholder="Name"
-                  className="p-4 w-full border border-gray-400 rounded-lg focus:outline-none"
+                  className="w-full rounded-lg border border-gray-400 p-4 focus:outline-none"
                 />
               </div>
               <div className="mb-6">
@@ -70,7 +70,7 @@ export default function Signup() {
                   value={email}
                   type="email"
                   placeholder="Email"
-                  className="p-4 w-full border border-gray-400 rounded-lg focus:outline-none"
+                  className="w-full rounded-lg border border-gray-400 p-4 focus:outline-none"
                 />
               </div>
               <div className="mb-6">
@@ -79,20 +79,20 @@ export default function Signup() {
                   value={password}
                   type="password"
                   placeholder="Password"
-                  className="p-4 w-full border border-gray-400 rounded-lg focus:outline-none"
+                  className="w-full rounded-lg border border-gray-400 p-4 focus:outline-none"
                 />
               </div>
               <Link
                 to="/auth/login"
-                className="text-blue-600 text-lg block mb-6"
+                className="mb-6 block text-lg text-blue-600"
               >
                 Login Now
               </Link>
               {message && (
-                <p className="text-center my-2 text-red-700">{message}</p>
+                <p className="my-2 text-center text-red-700">{message}</p>
               )}
               <div className="flex justify-center">
-                <button className="bg-blue-600 text-white px-8 py-5 rounded-lg text-lg">
+                <button className="rounded-lg bg-blue-600 px-8 py-5 text-lg text-white">
                   Create an Account
                 </button>
               </div>

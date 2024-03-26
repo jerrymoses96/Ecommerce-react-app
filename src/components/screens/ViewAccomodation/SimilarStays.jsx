@@ -10,7 +10,7 @@ const SimilarStays = ({ category }) => {
 
   // Filter data based on category
   const similarStays = data.filter((stay) =>
-    stay.categories.includes(category)
+    stay.categories.includes(category),
   );
 
   const toggleFavorite = (id) => {
@@ -31,8 +31,8 @@ const SimilarStays = ({ category }) => {
 
   return (
     <div>
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-semibold mb-5">Similar Stays</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="mb-5 text-2xl font-semibold">Similar Stays</h2>
         {showAll ? (
           <Button onClick={handleViewLess} label="View Less" />
         ) : (
@@ -47,16 +47,16 @@ const SimilarStays = ({ category }) => {
           .map((stay) => (
             <div
               key={stay.id}
-              className="flex rounded-xl shadow-md border border-[#E8ECF2] w-[100%] lg:w-[31%]  mb-5"
+              className="mb-5 flex w-[100%] rounded-xl border border-[#E8ECF2] shadow-md  lg:w-[31%]"
             >
               <div className="relative">
                 <img
-                  className="rounded-s-xl h-full object-cover"
+                  className="h-full rounded-s-xl object-cover"
                   src={`/${stay.image_url[0]}`}
                   alt="stay image"
                 />
                 <div
-                  className={`bg-[#F5F5F5] absolute top-2 right-2 rounded-full w-6 h-6 flex justify-center items-center ${
+                  className={`absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-[#F5F5F5] ${
                     favorites.includes(stay.id)
                       ? "bg-red-400"
                       : "text-gray-500 hover:bg-red-400"
@@ -66,21 +66,21 @@ const SimilarStays = ({ category }) => {
                   <CiHeart size={15} />
                 </div>
               </div>
-              <div className="p-5 flex flex-col justify-center ">
+              <div className="flex flex-col justify-center p-5 ">
                 <h3 className="font-semibold">{stay.name}</h3>
                 <p className="text-sm text-[#787878]">{stay.location}</p>
-                <p className="flex items-center mt-2">
+                <p className="mt-2 flex items-center">
                   {stay.average_rating}
                   <IoMdStar size={20} className="text-yellow-500" />
                 </p>
                 <div className="flex items-baseline">
-                  <p className="text-sm text-[#787878] border-r border-gray-300 mt-2 pr-2">
+                  <p className="mt-2 border-r border-gray-300 pr-2 text-sm text-[#787878]">
                     <small className="text-xl font-semibold text-[#00C29F]">
                       ${stay.price}
                     </small>
                     /night
                   </p>
-                  <div className="pl-2 flex gap-1 items-center">
+                  <div className="flex items-center gap-1 pl-2">
                     <img
                       width={20}
                       src="/src/assets/images/user.png"

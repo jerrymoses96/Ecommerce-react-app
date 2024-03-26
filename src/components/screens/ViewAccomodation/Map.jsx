@@ -3,7 +3,7 @@ import React from "react";
 const Map = () => {
   return (
     <div>
-      <div className="flex justify-between mb-3 items-center">
+      <div className="flex justify-between mt-10 items-center">
         <div>
           <h2 className="text-2xl font-semibold">Where you'll be</h2>
           <p className="flex gap-2 items-center">

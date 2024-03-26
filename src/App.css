@@ -64,3 +64,29 @@ img.active {
 .filter-section .filter-item {
   margin-bottom: 10px; /* Adjust as needed */
 }
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%); /* Start off-screen */
+  }
+  to {
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0); /* Start from original position */
+  }
+  to {
+    transform: translateX(-100%); /* Move off-screen */
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.3s ease;
+}
+
+.animate-slideOutLeft {
+  animation: slideOutLeft 0.3s ease;
+}

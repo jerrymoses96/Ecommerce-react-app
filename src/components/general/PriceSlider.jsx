@@ -20,7 +20,7 @@ const PriceSlider = ({ priceRange, setPriceRange }) => {
         onChange={(e) =>
           setPriceRange([priceRange[0], parseInt(e.target.value)])
         }
-        className="slider "
+        className="slider"
         id="price-slider"
       />
     </div>

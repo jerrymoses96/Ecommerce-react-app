@@ -23,7 +23,7 @@ const ViewAccommodation = () => {
 
   // Finding accommodation by ID
   const filteredAccommodation = data.find(
-    (accommodation) => accommodation.id === accommodationId
+    (accommodation) => accommodation.id === accommodationId,
   );
 
   return (
@@ -36,19 +36,19 @@ const ViewAccommodation = () => {
       {filteredAccommodation ? (
         <div>
           {/* Accommodation Details Section */}
-          <div className=" wrapper gap-5 pb-5 border-b border-green-200">
+          <div className=" wrapper gap-5 border-b border-green-200 pb-5">
             {/* Image Slider and About Section */}
-            <div className="w-[100%] flex flex-col lg:flex-row gap-5">
+            <div className="flex w-[100%] flex-col gap-5 lg:flex-row">
               <div className="w-[100%] lg:w-[60%]">
                 <ImageSlider images={filteredAccommodation.image_url} />
               </div>
-              <div className=" mt-0 lg:mt-10 w-[100%] lg:w-[40%]   px-5 py-10 border h-fit border-green-300 rounded-lg">
+              <div className=" mt-0 h-fit w-[100%] rounded-lg   border border-green-300 px-5 py-10 lg:mt-10 lg:w-[40%]">
                 <Details data={filteredAccommodation} />
               </div>
             </div>
 
             {/* Details and Features Section */}
-            <div className="flex-col mt-10 lg:mt-0 lg:flex lg:flex-row">
+            <div className="mt-10 flex-col lg:mt-0 lg:flex lg:flex-row">
               <div className="w-full lg:w-[60%]">
                 <About data={filteredAccommodation} />
               </div>
@@ -59,7 +59,7 @@ const ViewAccommodation = () => {
           </div>
 
           {/* Amenities and Map Section */}
-          <div className="wrapper py-5 flex-row lg:flex">
+          <div className="wrapper justify-between flex-row py-5 lg:flex">
             <Amenities />
             <Map location={filteredAccommodation.location} />
           </div>

@@ -18,7 +18,7 @@ const Review = ({ data }) => {
         <h2 className="text-2xl font-semibold mb-5">Review</h2>
         <Button label={"View All"} />
       </div>
-      <div className="gap-5 flex flex-col lg:flex-row">
+      <div className="gap-5 flex flex-col lg:flex-">
         {sortedData.map((review, index) => (
           <div
             key={review.id}

@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   const toggleHamburgerDropdown = () => {
-    setShowHamburgerDropdown(!showHamburgerDropdown);
+    setShowHamburgerDropdown((prevState) => !prevState);
   };
 
   const closeHamburgerDropdown = () => {
@@ -35,13 +35,13 @@ const Header = () => {
 
   return (
     <div
-      className="py-5 bg-[#F5F5F5] sticky top-0 z-10 relative"
+      className="relative sticky top-0 z-10 bg-[#F5F5F5] py-5"
       style={{
         borderTop: "1px solid #E8ECF2",
         borderBottom: "1px solid #E8ECF2",
       }}
     >
-      <div className="wrapper flex justify-between items-center">
+      <div className="wrapper flex items-center justify-between">
         {/* Conditionally render hamburger or cross icon based on the state */}
         {showHamburgerDropdown ? (
           <div className="block md:hidden" onClick={closeHamburgerDropdown}>
@@ -65,8 +65,13 @@ const Header = () => {
         />
       </div>
       {showHamburgerDropdown && (
-        <div className="hamburger-dropdown absolute top-20 left-0 w-full h-screen bg-black opacity-90 text-white text-xl ">
-          <ul className="gap-5 flex flex-col justify-center py-40 items-center font-bold ">
+        <div
+        className={`hamburger-dropdown absolute left-0 top-20 h-screen w-full bg-black text-xl text-white opacity-90 ${
+          showHamburgerDropdown ? "animate-slideInRight" : "animate-slideOutRight"
+        }`}
+        onClick={closeHamburgerDropdown}
+      >
+          <ul className="flex flex-col items-center justify-center gap-5 py-40 font-bold ">
             <Link to={"/"}>
               <li>Home</li>
             </Link>

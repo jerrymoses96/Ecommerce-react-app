@@ -6,28 +6,40 @@ import NoMatch from "../screens/NoMatch";
 import Login from "../screens/Login";
 import Signup from "../screens/SignUp";
 import AuthRoute from "./AuthRoute";
+import HomeRoute from "./HomeRoute";
 
 const AppRoute = () => {
   return (
     <>
       <Router>
         <Routes>
-        
-        
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <AuthRoute>
+                <Home />
+              </AuthRoute>
+            }
+          />
           <Route path="/viewaccomodation" element={<ViewAccomodation />} />
 
           <Route
             path="/viewaccomodation/:id"
             element={
-
               <AuthRoute>
                 <ViewAccomodation />
               </AuthRoute>
             }
           />
           <Route path="*" element={<NoMatch />} />
-          <Route path="/auth/login" element={<Login />} />
+          <Route
+            path="/auth/login"
+            element={
+              <HomeRoute>
+                <Login />
+              </HomeRoute>
+            }
+          />
           <Route path="/auth/create" element={<Signup />} />
         </Routes>
       </Router>
